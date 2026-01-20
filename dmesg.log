@@ -1,0 +1,754 @@
+[Tue Jan 20 10:17:44 2026] Linux version 6.12.16-generic (root@bianbu-26.04-build-bsp-smxtw-dhfw8) (gcc (Ubuntu 15.2.0-11ubuntu1) 15.2.0, GNU ld (GNU Binutils for Ubuntu) 2.45) #0.1.0.4+20260105010221 SMP PREEMPT_DYNAMIC Sun Jan  4 18:32:18 
+[Tue Jan 20 10:17:44 2026] random: crng init done
+[Tue Jan 20 10:17:44 2026] Machine model: spacemit,k3-com260
+[Tue Jan 20 10:17:44 2026] SBI specification v2.0 detected
+[Tue Jan 20 10:17:44 2026] SBI implementation ID=0x1 Version=0x10006
+[Tue Jan 20 10:17:44 2026] SBI TIME extension detected
+[Tue Jan 20 10:17:44 2026] SBI IPI extension detected
+[Tue Jan 20 10:17:44 2026] SBI RFENCE extension detected
+[Tue Jan 20 10:17:44 2026] SBI DBCN extension detected
+[Tue Jan 20 10:17:44 2026] earlycon: sbi0 at I/O port 0x0 (options '')
+[Tue Jan 20 10:17:44 2026] printk: legacy bootconsole [sbi0] enabled
+[Tue Jan 20 10:17:44 2026] efi: UEFI not found.
+[Tue Jan 20 10:17:44 2026] Reserved memory: created CMA memory pool at 0x0000000140000000, size 512 MiB
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x0000000140000000..0x000000015fffffff (524288 KiB) map reusable linux,cma
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x0000000100000000..0x000000010003ffff (256 KiB) nomap non-reusable mmode_resv0@1,0
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x0000000100040000..0x000000010007ffff (256 KiB) nomap non-reusable mmode_resv1@1,40000
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x0000000100200000..0x00000001004fffff (3072 KiB) nomap non-reusable rcpu0_pwr@100200000
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x0000000100500000..0x00000001006fffff (2048 KiB) nomap non-reusable rcpu0_heap@100500000
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x00000000c0876000..0x00000000c0878fff (12 KiB) nomap non-reusable vdev0vring0@c0876000
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x00000000c0879000..0x00000000c087bfff (12 KiB) nomap non-reusable vdev0vring1@c0879000
+[Tue Jan 20 10:17:44 2026] Reserved memory: created DMA memory pool at 0x0000000100700000, size 0 MiB
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: initialized node vdev0buffer@100700000, compatible id shared-dma-pool
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x0000000100700000..0x00000001007fbfff (1008 KiB) nomap non-reusable vdev0buffer@100700000
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x00000001007fc000..0x00000001007fffff (16 KiB) nomap non-reusable rcpu0_rsc_table@1007fc000
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x0000000100800000..0x0000000100803fff (16 KiB) nomap non-reusable rpmi0@100800000
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x0000000100804000..0x0000000100b03fff (3072 KiB) nomap non-reusable rcpu1_runtime@100804000
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x0000000100b04000..0x0000000100d03fff (2048 KiB) nomap non-reusable rcpu1_heap@100B04000
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x00000000c086c000..0x00000000c086efff (12 KiB) nomap non-reusable vdev0vring0@c086c000
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x00000000c086f000..0x00000000c0871fff (12 KiB) nomap non-reusable vdev0vring1@c086f000
+[Tue Jan 20 10:17:44 2026] Reserved memory: created DMA memory pool at 0x0000000100d04000, size 0 MiB
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: initialized node vdev0buffer@100d04000, compatible id shared-dma-pool
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x0000000100d04000..0x0000000100dfffff (1008 KiB) nomap non-reusable vdev0buffer@100d04000
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x0000000100e00000..0x0000000100e03fff (16 KiB) nomap non-reusable rcpu1_rsc_table@100e00000
+[Tue Jan 20 10:17:44 2026] Reserved memory: created DMA memory pool at 0x0000000101b00000, size 2 MiB
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: initialized node dpu_reserved@101b00000, compatible id shared-dma-pool
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x0000000101b00000..0x0000000101d7ffff (2560 KiB) nomap non-reusable dpu_reserved@101b00000
+[Tue Jan 20 10:17:44 2026] Reserved memory: created DMA memory pool at 0x0000000101d80000, size 2 MiB
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: initialized node dpu_reserved1@101d80000, compatible id shared-dma-pool
+[Tue Jan 20 10:17:44 2026] OF: reserved mem: 0x0000000101d80000..0x0000000101ffffff (2560 KiB) nomap non-reusable dpu_reserved1@101d80000
+[Tue Jan 20 10:17:44 2026] Zone ranges:
+[Tue Jan 20 10:17:44 2026]   Normal   [mem 0x0000000102000000-0x00000008ffffffff]
+[Tue Jan 20 10:17:44 2026] Movable zone start for each node
+[Tue Jan 20 10:17:44 2026] Early memory node ranges
+[Tue Jan 20 10:17:44 2026]   node   0: [mem 0x0000000102000000-0x00000008ffffffff]
+[Tue Jan 20 10:17:44 2026] Initmem setup node 0 [mem 0x0000000102000000-0x00000008ffffffff]
+[Tue Jan 20 10:17:44 2026] On node 0, zone Normal: 8192 pages in unavailable ranges
+[Tue Jan 20 10:17:44 2026] SBI HSM extension detected
+[Tue Jan 20 10:17:44 2026] riscv: base ISA extensions acdfimv
+[Tue Jan 20 10:17:44 2026] riscv: ELF capabilities acdfimv
+[Tue Jan 20 10:17:44 2026] percpu: Embedded 52 pages/cpu s86040 r8192 d118760 u212992
+[Tue Jan 20 10:17:44 2026] pcpu-alloc: s86040 r8192 d118760 u212992 alloc=52*4096
+[Tue Jan 20 10:17:44 2026] pcpu-alloc: [0] 00 [0] 01 [0] 02 [0] 03 [0] 04 [0] 05 [0] 06 [0] 07 
+[Tue Jan 20 10:17:44 2026] pcpu-alloc: [0] 08 [0] 09 [0] 10 [0] 11 [0] 12 [0] 13 [0] 14 [0] 15 
+[Tue Jan 20 10:17:44 2026] Kernel command line: clk_ignore_unused nohlt plymouth.prefer-fbcon plymouth.ignore-serial-consoles splash loglevel=8 cros_ec_espi.disable=1 mtdparts=spi-flash:128K@0(bootinfo),512K@128K(fsbl),64K@640K(env),1M@704K(esos),384K@1728K(opensbi),-@2112K(uboot) rootfstype=ext4 root=UUID=fe62cacd-a6b5-4dbe-8cdc-3ecfb2d098be earlycon=sbi console=ttyS0,115200 random.trust_bootloader=1
+[Tue Jan 20 10:17:44 2026] Unknown kernel command line parameters "splash mtdparts=spi-flash:128K@0(bootinfo),512K@128K(fsbl),64K@640K(env),1M@704K(esos),384K@1728K(opensbi),-@2112K(uboot)", will be passed to user space.
+[Tue Jan 20 10:17:44 2026] Dentry cache hash table entries: 4194304 (order: 13, 33554432 bytes, linear)
+[Tue Jan 20 10:17:44 2026] Inode-cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[Tue Jan 20 10:17:44 2026] Built 1 zonelists, mobility grouping on.  Total pages: 8380416
+[Tue Jan 20 10:17:44 2026] mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+[Tue Jan 20 10:17:44 2026] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=16, Nodes=1
+[Tue Jan 20 10:17:44 2026] **********************************************************
+[Tue Jan 20 10:17:44 2026] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[Tue Jan 20 10:17:44 2026] **                                                      **
+[Tue Jan 20 10:17:44 2026] ** trace_printk() being used. Allocating extra memory.  **
+[Tue Jan 20 10:17:44 2026] **                                                      **
+[Tue Jan 20 10:17:44 2026] ** This means that this is a DEBUG kernel and it is     **
+[Tue Jan 20 10:17:44 2026] ** unsafe for production use.                           **
+[Tue Jan 20 10:17:44 2026] **                                                      **
+[Tue Jan 20 10:17:44 2026] ** If you see this message and you are not debugging    **
+[Tue Jan 20 10:17:44 2026] ** the kernel, report this immediately to your vendor!  **
+[Tue Jan 20 10:17:44 2026] **                                                      **
+[Tue Jan 20 10:17:44 2026] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[Tue Jan 20 10:17:44 2026] **********************************************************
+[Tue Jan 20 10:17:44 2026] Dynamic Preempt: voluntary
+[Tue Jan 20 10:17:44 2026] rcu: Preemptible hierarchical RCU implementation.
+[Tue Jan 20 10:17:44 2026] 	Trampoline variant of Tasks RCU enabled.
+[Tue Jan 20 10:17:44 2026] 	Tracing variant of Tasks RCU enabled.
+[Tue Jan 20 10:17:44 2026] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[Tue Jan 20 10:17:44 2026] RCU Tasks: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=16.
+[Tue Jan 20 10:17:44 2026] RCU Tasks Trace: Setting shift to 4 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=16.
+[Tue Jan 20 10:17:44 2026] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[Tue Jan 20 10:17:44 2026] riscv-intc: 64 local interrupts mapped using AIA
+[Tue Jan 20 10:17:44 2026] riscv-imsic: interrupt-controller@e0400000: providing IPIs using interrupt 1
+[Tue Jan 20 10:17:44 2026] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[Tue Jan 20 10:17:44 2026] clocksource: riscv_clocksource: mask: 0xffffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[Tue Jan 20 10:17:44 2026] sched_clock: 64 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[Tue Jan 20 10:17:44 2026] riscv-timer: Timer interrupt in S-mode is available via sstc extension
+[Tue Jan 20 10:17:44 2026] Console: colour dummy device 80x25
+[Tue Jan 20 10:17:44 2026] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=96000)
+[Tue Jan 20 10:17:44 2026] pid_max: default: 32768 minimum: 301
+[Tue Jan 20 10:17:44 2026] LSM: initializing lsm=capability,landlock,apparmor
+[Tue Jan 20 10:17:44 2026] landlock: Up and running.
+[Tue Jan 20 10:17:44 2026] AppArmor: AppArmor initialized
+[Tue Jan 20 10:17:44 2026] Mount-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[Tue Jan 20 10:17:44 2026] Mountpoint-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[Tue Jan 20 10:17:44 2026] riscv: ELF compat mode unsupported
+[Tue Jan 20 10:17:44 2026] ASID allocator using 16 bits (65536 entries)
+[Tue Jan 20 10:17:44 2026] rcu: Hierarchical SRCU implementation.
+[Tue Jan 20 10:17:44 2026] rcu: 	Max phase no-delay instances is 1000.
+[Tue Jan 20 10:17:44 2026] Timer migration: 2 hierarchy levels; 8 children per group; 2 crossnode level
+[Tue Jan 20 10:17:44 2026] EFI services will not be available.
+[Tue Jan 20 10:17:44 2026] smp: Bringing up secondary CPUs ...
+[Tue Jan 20 10:17:44 2026] smp: Brought up 1 node, 16 CPUs
+[Tue Jan 20 10:17:44 2026] Memory: 32303080K/33521664K available (13431K kernel code, 5806K rwdata, 6144K rodata, 2326K init, 624K bss, 654128K reserved, 524288K cma-reserved)
+[Tue Jan 20 10:17:44 2026] devtmpfs: initialized
+[Tue Jan 20 10:17:44 2026] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[Tue Jan 20 10:17:44 2026] futex hash table entries: 4096 (order: 6, 262144 bytes, linear)
+[Tue Jan 20 10:17:44 2026] pinctrl core: initialized pinctrl subsystem
+[Tue Jan 20 10:17:44 2026] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[Tue Jan 20 10:17:44 2026] DMA: preallocated 4096 KiB GFP_KERNEL pool for atomic allocations
+[Tue Jan 20 10:17:44 2026] audit: initializing netlink subsys (disabled)
+[Tue Jan 20 10:17:44 2026] audit: type=2000 audit(0.276:1): state=initialized audit_enabled=0 res=1
+[Tue Jan 20 10:17:44 2026] display class register
+[Tue Jan 20 10:17:44 2026] thermal_sys: Registered thermal governor 'step_wise'
+[Tue Jan 20 10:17:44 2026] cpu3: Ratio of byte access time to unaligned word access is 2.02, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu2: Ratio of byte access time to unaligned word access is 1.97, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu1: Ratio of byte access time to unaligned word access is 1.97, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu5: Ratio of byte access time to unaligned word access is 1.48, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu4: Ratio of byte access time to unaligned word access is 1.45, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu7: Ratio of byte access time to unaligned word access is 1.45, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu6: Ratio of byte access time to unaligned word access is 1.64, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu12: Ratio of byte access time to unaligned word access is 12.80, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu13: Ratio of byte access time to unaligned word access is 12.80, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu14: Ratio of byte access time to unaligned word access is 12.80, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu15: Ratio of byte access time to unaligned word access is 12.80, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu9: Ratio of byte access time to unaligned word access is 12.80, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu11: Ratio of byte access time to unaligned word access is 12.80, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu10: Ratio of byte access time to unaligned word access is 12.80, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu8: Ratio of byte access time to unaligned word access is 12.80, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] cpu0: Ratio of byte access time to unaligned word access is 4.94, unaligned accesses are fast
+[Tue Jan 20 10:17:44 2026] /soc/i2c@d4010800/tcpc@25/connector@0: Fixed dependency cycle(s) with /soc/phy@cad30000
+[Tue Jan 20 10:17:44 2026] /soc/i2c@d4010800/tcpc@25/connector@0: Fixed dependency cycle(s) with /soc/usb3@cad00000
+[Tue Jan 20 10:17:44 2026] /soc/phy@cad30000: Fixed dependency cycle(s) with /soc/i2c@d4010800/tcpc@25/connector@0
+[Tue Jan 20 10:17:44 2026] /soc/usb3@cad00000: Fixed dependency cycle(s) with /soc/i2c@d4010800/tcpc@25/connector@0
+[Tue Jan 20 10:17:44 2026] /soc/usb3@cad00000: Fixed dependency cycle(s) with /soc/phy@cad30000
+[Tue Jan 20 10:17:44 2026] /soc/dpu1_crtc0: Fixed dependency cycle(s) with /soc/dp1@cac88000
+[Tue Jan 20 10:17:44 2026] /soc/dp1@cac88000: Fixed dependency cycle(s) with /soc/dpu1_crtc0
+[Tue Jan 20 10:17:44 2026] /soc/i2c@d4010800/tcpc@25/connector@0: Fixed dependency cycle(s) with /soc/phy@cad30000
+[Tue Jan 20 10:17:44 2026] /soc/i2c@d4010800/tcpc@25/connector@0: Fixed dependency cycle(s) with /soc/usb3@cad00000
+[Tue Jan 20 10:17:44 2026] /soc/i2c@d4010800/tcpc@25/connector@0: Fixed dependency cycle(s) with /soc/phy@cad30000
+[Tue Jan 20 10:17:45 2026] /soc/phy@cad30000: Fixed dependency cycle(s) with /soc/i2c@d4010800/tcpc@25/connector@0
+[Tue Jan 20 10:17:45 2026] /soc/i2c@d4010800/tcpc@25/connector@0: Fixed dependency cycle(s) with /soc/usb3@cad00000
+[Tue Jan 20 10:17:45 2026] /soc/usb3@cad00000: Fixed dependency cycle(s) with /soc/i2c@d4010800/tcpc@25/connector@0
+[Tue Jan 20 10:17:45 2026] /soc/usb3@cad00000: Fixed dependency cycle(s) with /soc/phy@cad30000
+[Tue Jan 20 10:17:45 2026] /soc/pcie@80000000: Fixed dependency cycle(s) with /soc/pcie@80000000/interrupt-controller@0
+[Tue Jan 20 10:17:45 2026] /soc/dpu1_crtc0: Fixed dependency cycle(s) with /soc/dp1@cac88000
+[Tue Jan 20 10:17:45 2026] /soc/dpu1_crtc0: Fixed dependency cycle(s) with /soc/dp1@cac88000
+[Tue Jan 20 10:17:45 2026] /soc/dp1@cac88000: Fixed dependency cycle(s) with /soc/dpu1_crtc0
+[Tue Jan 20 10:17:45 2026] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[Tue Jan 20 10:17:45 2026] HugeTLB: 16380 KiB vmemmap can be freed for a 1.00 GiB page
+[Tue Jan 20 10:17:45 2026] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[Tue Jan 20 10:17:45 2026] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[Tue Jan 20 10:17:45 2026] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[Tue Jan 20 10:17:45 2026] HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+[Tue Jan 20 10:17:45 2026] SCSI subsystem initialized
+[Tue Jan 20 10:17:45 2026] usbcore: registered new interface driver usbfs
+[Tue Jan 20 10:17:45 2026] usbcore: registered new interface driver hub
+[Tue Jan 20 10:17:45 2026] usbcore: registered new device driver usb
+[Tue Jan 20 10:17:45 2026] mc: Linux media interface: v0.10
+[Tue Jan 20 10:17:45 2026] videodev: Linux video capture interface: v2.00
+[Tue Jan 20 10:17:45 2026] Advanced Linux Sound Architecture Driver Initialized.
+[Tue Jan 20 10:17:45 2026] NetLabel: Initializing
+[Tue Jan 20 10:17:45 2026] NetLabel:  domain hash size = 128
+[Tue Jan 20 10:17:45 2026] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[Tue Jan 20 10:17:45 2026] NetLabel:  unlabeled traffic allowed by default
+[Tue Jan 20 10:17:45 2026] mctp: management component transport protocol core
+[Tue Jan 20 10:17:45 2026] NET: Registered PF_MCTP protocol family
+[Tue Jan 20 10:17:45 2026] vgaarb: loaded
+[Tue Jan 20 10:17:45 2026] clocksource: Switched to clocksource riscv_clocksource
+[Tue Jan 20 10:17:45 2026] VFS: Disk quotas dquot_6.6.0
+[Tue Jan 20 10:17:45 2026] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[Tue Jan 20 10:17:45 2026] AppArmor: AppArmor Filesystem Enabled
+[Tue Jan 20 10:17:45 2026] NET: Registered PF_INET protocol family
+[Tue Jan 20 10:17:45 2026] IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[Tue Jan 20 10:17:45 2026] tcp_listen_portaddr_hash hash table entries: 16384 (order: 6, 262144 bytes, linear)
+[Tue Jan 20 10:17:45 2026] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[Tue Jan 20 10:17:45 2026] TCP established hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[Tue Jan 20 10:17:45 2026] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[Tue Jan 20 10:17:45 2026] TCP: Hash tables configured (established 262144 bind 65536)
+[Tue Jan 20 10:17:45 2026] MPTCP token hash table entries: 32768 (order: 7, 786432 bytes, linear)
+[Tue Jan 20 10:17:45 2026] UDP hash table entries: 16384 (order: 7, 524288 bytes, linear)
+[Tue Jan 20 10:17:45 2026] UDP-Lite hash table entries: 16384 (order: 7, 524288 bytes, linear)
+[Tue Jan 20 10:17:45 2026] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[Tue Jan 20 10:17:45 2026] NET: Registered PF_XDP protocol family
+[Tue Jan 20 10:17:45 2026] PCI: CLS 0 bytes, default 64
+[Tue Jan 20 10:17:45 2026] Unpacking initramfs...
+[Tue Jan 20 10:17:45 2026] Initialise system trusted keyrings
+[Tue Jan 20 10:17:45 2026] workingset: timestamp_bits=46 max_order=23 bucket_order=0
+[Tue Jan 20 10:17:45 2026] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[Tue Jan 20 10:17:45 2026] fuse: init (API version 7.41)
+[Tue Jan 20 10:17:45 2026] Key type asymmetric registered
+[Tue Jan 20 10:17:45 2026] Asymmetric key parser 'x509' registered
+[Tue Jan 20 10:17:45 2026] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 248)
+[Tue Jan 20 10:17:45 2026] io scheduler mq-deadline registered
+[Tue Jan 20 10:17:45 2026] riscv-imsic: interrupt-controller@e0400000:  hart-index-bits: 4,  guest-index-bits: 6
+[Tue Jan 20 10:17:45 2026] riscv-imsic: interrupt-controller@e0400000: group-index-bits: 0, group-index-shift: 24
+[Tue Jan 20 10:17:45 2026] riscv-imsic: interrupt-controller@e0400000: per-CPU IDs 511 at base address 0x00000000e0400000
+[Tue Jan 20 10:17:45 2026] riscv-imsic: interrupt-controller@e0400000: total 8160 interrupts available
+[Tue Jan 20 10:17:45 2026] riscv-aplic e0804000.interrupt-controller: 512 interrupts forwarded to MSI base 0x00000000e0400000
+[Tue Jan 20 10:17:45 2026] Serial: 8250/16550 driver, 17 ports, IRQ sharing disabled
+[Tue Jan 20 10:17:45 2026] [drm] spacemit_drm_probe()
+[Tue Jan 20 10:17:45 2026] loop: module loaded
+[Tue Jan 20 10:17:45 2026] tun: Universal TUN/TAP device driver, 1.6
+[Tue Jan 20 10:17:45 2026] spacemit,k3-usb3-phy 81f00000.phy: Update Combo Mode 20 to USB Mode
+[Tue Jan 20 10:17:45 2026] phy phy-81f00000.phy.0: PHY version: 0x302 init as USB3 mode
+[Tue Jan 20 10:17:45 2026] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[Tue Jan 20 10:17:45 2026] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[Tue Jan 20 10:17:45 2026] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe6d hci version 0x110 quirks 0x0000808000000010
+[Tue Jan 20 10:17:45 2026] xhci-hcd xhci-hcd.0.auto: irq 20, io mem 0x81400000
+[Tue Jan 20 10:17:45 2026] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[Tue Jan 20 10:17:45 2026] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[Tue Jan 20 10:17:45 2026] xhci-hcd xhci-hcd.0.auto: Host supports USB 3.0 SuperSpeed
+[Tue Jan 20 10:17:45 2026] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.12
+[Tue Jan 20 10:17:45 2026] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[Tue Jan 20 10:17:45 2026] usb usb1: Product: xHCI Host Controller
+[Tue Jan 20 10:17:45 2026] usb usb1: Manufacturer: Linux 6.12.16-generic xhci-hcd
+[Tue Jan 20 10:17:45 2026] usb usb1: SerialNumber: xhci-hcd.0.auto
+[Tue Jan 20 10:17:45 2026] hub 1-0:1.0: USB hub found
+[Tue Jan 20 10:17:45 2026] hub 1-0:1.0: 1 port detected
+[Tue Jan 20 10:17:45 2026] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[Tue Jan 20 10:17:45 2026] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.12
+[Tue Jan 20 10:17:45 2026] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[Tue Jan 20 10:17:45 2026] usb usb2: Product: xHCI Host Controller
+[Tue Jan 20 10:17:45 2026] usb usb2: Manufacturer: Linux 6.12.16-generic xhci-hcd
+[Tue Jan 20 10:17:45 2026] usb usb2: SerialNumber: xhci-hcd.0.auto
+[Tue Jan 20 10:17:45 2026] hub 2-0:1.0: USB hub found
+[Tue Jan 20 10:17:45 2026] hub 2-0:1.0: 1 port detected
+[Tue Jan 20 10:17:45 2026] usbcore: registered new interface driver uas
+[Tue Jan 20 10:17:45 2026] usbcore: registered new interface driver usb-storage
+[Tue Jan 20 10:17:45 2026] usbcore: registered new device driver onboard-usb-dev
+[Tue Jan 20 10:17:45 2026] i2c_dev: i2c /dev entries driver
+[Tue Jan 20 10:17:45 2026] usbcore: registered new interface driver uvcvideo
+[Tue Jan 20 10:17:45 2026] System boots up not because of SoC watchdog reset.
+[Tue Jan 20 10:17:45 2026] cpufreq: Unable to obtain ARMCLK: -2
+[Tue Jan 20 10:17:45 2026] sdhci: Secure Digital Host Controller Interface driver
+[Tue Jan 20 10:17:45 2026] sdhci: Copyright(c) Pierre Ossman
+[Tue Jan 20 10:17:45 2026] sdhci-pltfm: SDHCI platform and OF driver helper
+[Tue Jan 20 10:17:45 2026] ufshcd-spacemit-k3 c0e00000.ufshc: Platform init completed
+[Tue Jan 20 10:17:45 2026] ufshcd-spacemit-k3 c0e00000.ufshc: ufshcd_populate_vreg: Unable to find vdd-hba-supply regulator, assuming enabled
+[Tue Jan 20 10:17:45 2026] ufshcd-spacemit-k3 c0e00000.ufshc: ufshcd_populate_vreg: Unable to find vcc-supply regulator, assuming enabled
+[Tue Jan 20 10:17:45 2026] ufshcd-spacemit-k3 c0e00000.ufshc: ufshcd_populate_vreg: Unable to find vccq-supply regulator, assuming enabled
+[Tue Jan 20 10:17:45 2026] ufshcd-spacemit-k3 c0e00000.ufshc: ufshcd_populate_vreg: Unable to find vccq2-supply regulator, assuming enabled
+[Tue Jan 20 10:17:45 2026] ufshcd-spacemit-k3 c0e00000.ufshc: Reset control initialized successfully
+[Tue Jan 20 10:17:45 2026] scsi host0: ufshcd
+[Tue Jan 20 10:17:45 2026] hid: raw HID events driver (C) Jiri Kosina
+[Tue Jan 20 10:17:45 2026] ufshcd-spacemit-k3 c0e00000.ufshc: M-PHY PLL locked successfully
+[Tue Jan 20 10:17:45 2026] usbcore: registered new interface driver usbhid
+[Tue Jan 20 10:17:45 2026] ufshcd-spacemit-k3 c0e00000.ufshc: UniPro v1.6 init completed
+[Tue Jan 20 10:17:45 2026] usbhid: USB HID core driver
+[Tue Jan 20 10:17:45 2026] riscv-sbi-mpxy-mbox soc:mpxy_mbox@0: mailbox registered with 3 channels
+[Tue Jan 20 10:17:45 2026] riscv-pmu-sbi: SBI PMU extension is available
+[Tue Jan 20 10:17:45 2026] riscv-pmu-sbi: 16 firmware and 18 hardware counters
+[Tue Jan 20 10:17:45 2026] usbcore: registered new interface driver snd-usb-audio
+[Tue Jan 20 10:17:45 2026] NET: Registered PF_INET6 protocol family
+[Tue Jan 20 10:17:45 2026] usb 1-1: new high-speed USB device number 2 using xhci-hcd
+[Tue Jan 20 10:17:45 2026] ufshcd-spacemit-k3 c0e00000.ufshc: M-PHY PLL locked after power mode change
+[Tue Jan 20 10:17:45 2026] scsi 0:0:0:49488: Well-known LUN    SAMSUNG  KLUCG2U1DC-B0F1  0400 PQ: 0 ANSI: 6
+[Tue Jan 20 10:17:45 2026] scsi 0:0:0:49476: Well-known LUN    SAMSUNG  KLUCG2U1DC-B0F1  0400 PQ: 0 ANSI: 6
+[Tue Jan 20 10:17:45 2026] scsi 0:0:0:49456: Well-known LUN    SAMSUNG  KLUCG2U1DC-B0F1  0400 PQ: 0 ANSI: 6
+[Tue Jan 20 10:17:45 2026] scsi 0:0:0:0: Direct-Access     SAMSUNG  KLUCG2U1DC-B0F1  0400 PQ: 0 ANSI: 6
+[Tue Jan 20 10:17:45 2026] sd 0:0:0:0: [sda] 15626240 4096-byte logical blocks: (64.0 GB/59.6 GiB)
+[Tue Jan 20 10:17:45 2026] sd 0:0:0:0: [sda] Write Protect is off
+[Tue Jan 20 10:17:45 2026] sd 0:0:0:0: [sda] Mode Sense: 00 32 00 10
+[Tue Jan 20 10:17:45 2026] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[Tue Jan 20 10:17:45 2026] sd 0:0:0:0: [sda] Preferred minimum I/O size 524288 bytes
+[Tue Jan 20 10:17:46 2026] sd 0:0:0:0: [sda] Optimal transfer size 524288 bytes
+[Tue Jan 20 10:17:46 2026] sd 0:0:0:0: [sda] Attached SCSI disk
+[Tue Jan 20 10:17:46 2026] usb 1-1: New USB device found, idVendor=2109, idProduct=2817, bcdDevice= 7.00
+[Tue Jan 20 10:17:46 2026] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[Tue Jan 20 10:17:46 2026] usb 1-1: Product: USB2.0 Hub             
+[Tue Jan 20 10:17:46 2026] usb 1-1: Manufacturer: VIA Labs, Inc.         
+[Tue Jan 20 10:17:46 2026] hub 1-1:1.0: USB hub found
+[Tue Jan 20 10:17:46 2026] hub 1-1:1.0: 5 ports detected
+[Tue Jan 20 10:17:46 2026] usb 2-1: new SuperSpeed USB device number 2 using xhci-hcd
+[Tue Jan 20 10:17:46 2026] usb 2-1: New USB device found, idVendor=2109, idProduct=0817, bcdDevice= 7.00
+[Tue Jan 20 10:17:46 2026] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[Tue Jan 20 10:17:46 2026] usb 2-1: Product: USB3.0 Hub             
+[Tue Jan 20 10:17:46 2026] usb 2-1: Manufacturer: VIA Labs, Inc.         
+[Tue Jan 20 10:17:46 2026] hub 2-1:1.0: USB hub found
+[Tue Jan 20 10:17:46 2026] hub 2-1:1.0: 4 ports detected
+[Tue Jan 20 10:17:46 2026] Freeing initrd memory: 29212K
+[Tue Jan 20 10:17:46 2026] Segment Routing with IPv6
+[Tue Jan 20 10:17:46 2026] In-situ OAM (IOAM) with IPv6
+[Tue Jan 20 10:17:46 2026] NET: Registered PF_PACKET protocol family
+[Tue Jan 20 10:17:46 2026] NET: Registered PF_RXRPC protocol family
+[Tue Jan 20 10:17:46 2026] Key type rxrpc registered
+[Tue Jan 20 10:17:46 2026] Key type rxrpc_s registered
+[Tue Jan 20 10:17:46 2026] Key type dns_resolver registered
+[Tue Jan 20 10:17:46 2026] Loading compiled-in X.509 certificates
+[Tue Jan 20 10:17:46 2026] Key type .fscrypt registered
+[Tue Jan 20 10:17:46 2026] Key type fscrypt-provisioning registered
+[Tue Jan 20 10:17:46 2026] AppArmor: AppArmor sha256 policy hashing enabled
+[Tue Jan 20 10:17:46 2026] spacemit,k3-usb3-phy cad30000.phy: Using orientation-switch mode, flip: 0
+[Tue Jan 20 10:17:46 2026] gpio gpiochip0: Static allocation of GPIO base is deprecated, use dynamic allocation.
+[Tue Jan 20 10:17:46 2026] gpio gpiochip1: Static allocation of GPIO base is deprecated, use dynamic allocation.
+[Tue Jan 20 10:17:46 2026] gpio gpiochip2: Static allocation of GPIO base is deprecated, use dynamic allocation.
+[Tue Jan 20 10:17:46 2026] gpio gpiochip3: Static allocation of GPIO base is deprecated, use dynamic allocation.
+[Tue Jan 20 10:17:46 2026] dwc3-generic-plat 81400000.usb3: Failed to create device link (0x180) with d4019000.gpio
+[Tue Jan 20 10:17:46 2026] spacemit-pcie 80000000.pcie: pcie config device cmd fault: 0x400003bf
+[Tue Jan 20 10:17:46 2026] spacemit-pcie 80000000.pcie: pcie config device cmd in rc mode: 0x400003bf
+[Tue Jan 20 10:17:46 2026] spacemit-pcie 80000000.pcie: host bridge /soc/pcie@80000000 ranges:
+[Tue Jan 20 10:17:46 2026] spacemit-pcie 80000000.pcie:       IO 0x1100010000..0x110010ffff -> 0x1100010000
+[Tue Jan 20 10:17:46 2026] spacemit-pcie 80000000.pcie:      MEM 0x1100110000..0x118010ffff -> 0x0080000000
+[Tue Jan 20 10:17:46 2026] spacemit-pcie 80000000.pcie:      MEM 0x1800000000..0x18ffffffff -> 0x1800000000
+[Tue Jan 20 10:17:46 2026] spacemit-pcie: Starting PHY initialization...
+[Tue Jan 20 10:17:46 2026] Configuring PCIe A x4
+[Tue Jan 20 10:17:46 2026] Now int init_x2_puphy...
+[Tue Jan 20 10:17:46 2026] Now int init_x2_puphy...
+[Tue Jan 20 10:17:46 2026] waiting pll lock...
+[Tue Jan 20 10:17:46 2026] PHY PLL Locked.
+[Tue Jan 20 10:17:46 2026] waiting pll lock...
+[Tue Jan 20 10:17:46 2026] PHY PLL Locked.
+[Tue Jan 20 10:17:46 2026] spacemit-pcie: PHY initialization done.
+[Tue Jan 20 10:17:46 2026] spacemit-pcie 80000000.pcie: iATU: unroll T, 31 ob, 31 ib, align 64K, limit 4G
+[Tue Jan 20 10:17:46 2026] usb 1-1.5: new high-speed USB device number 3 using xhci-hcd
+[Tue Jan 20 10:17:46 2026] spacemit-pcie 80000000.pcie: PCIe Gen.1 x4 link up
+[Tue Jan 20 10:17:46 2026] spacemit-pcie 80000000.pcie: PCI host bridge to bus 0000:00
+[Tue Jan 20 10:17:46 2026] pci_bus 0000:00: root bus resource [bus 00-ff]
+[Tue Jan 20 10:17:46 2026] pci_bus 0000:00: root bus resource [io  0x0000-0xfffff] (bus address [0x1100010000-0x110010ffff])
+[Tue Jan 20 10:17:46 2026] pci_bus 0000:00: root bus resource [mem 0x1100110000-0x118010ffff] (bus address [0x80000000-0xffffffff])
+[Tue Jan 20 10:17:46 2026] pci_bus 0000:00: root bus resource [mem 0x1800000000-0x18ffffffff pref]
+[Tue Jan 20 10:17:46 2026] pci 0000:00:00.0: [201f:0002] type 01 class 0x060400 PCIe Root Port
+[Tue Jan 20 10:17:46 2026] pci 0000:00:00.0: BAR 0 [mem 0x00000000-0x07ffffff]
+[Tue Jan 20 10:17:46 2026] pci 0000:00:00.0: BAR 1 [mem 0x00000000-0x07ffffff]
+[Tue Jan 20 10:17:46 2026] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[Tue Jan 20 10:17:46 2026] pci 0000:00:00.0:   bridge window [io  0x0000-0x0fff]
+[Tue Jan 20 10:17:46 2026] pci 0000:00:00.0:   bridge window [mem 0x00000000-0x000fffff]
+[Tue Jan 20 10:17:46 2026] pci 0000:00:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[Tue Jan 20 10:17:46 2026] pci 0000:00:00.0: supports D1
+[Tue Jan 20 10:17:46 2026] pci 0000:00:00.0: PME# supported from D0 D1 D3hot D3cold
+[Tue Jan 20 10:17:47 2026] usb 1-1.5: New USB device found, idVendor=2109, idProduct=8817, bcdDevice= 0.01
+[Tue Jan 20 10:17:47 2026] pci 0000:01:00.0: [126f:2263] type 00 class 0x010802 PCIe Endpoint
+[Tue Jan 20 10:17:47 2026] usb 1-1.5: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[Tue Jan 20 10:17:47 2026] pci 0000:01:00.0: BAR 0 [mem 0x00000000-0x00003fff 64bit]
+[Tue Jan 20 10:17:47 2026] usb 1-1.5: Product: USB Billboard Device   
+[Tue Jan 20 10:17:47 2026] pci 0000:01:00.0: 8.000 Gb/s available PCIe bandwidth, limited by 2.5 GT/s PCIe x4 link at 0000:00:00.0 (capable of 31.504 Gb/s with 8.0 GT/s PCIe x4 link)
+[Tue Jan 20 10:17:47 2026] usb 1-1.5: Manufacturer: VIA Labs, Inc.         
+[Tue Jan 20 10:17:47 2026] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+[Tue Jan 20 10:17:47 2026] usb 1-1.5: SerialNumber: 0000000000000001
+[Tue Jan 20 10:17:47 2026] pci 0000:00:00.0: BAR 0 [mem 0x1108000000-0x110fffffff]: assigned
+[Tue Jan 20 10:17:47 2026] pci 0000:00:00.0: BAR 0: error updating (0x87ef0000 != 0x80000000)
+[Tue Jan 20 10:17:47 2026] pci 0000:00:00.0: BAR 1 [mem 0x1110000000-0x1117ffffff]: assigned
+[Tue Jan 20 10:17:47 2026] pci 0000:00:00.0: BAR 1: error updating (0x8fef0000 != 0x88000000)
+[Tue Jan 20 10:17:47 2026] pci 0000:00:00.0: bridge window [mem 0x1100200000-0x11002fffff]: assigned
+[Tue Jan 20 10:17:47 2026] pci 0000:01:00.0: BAR 0 [mem 0x1100200000-0x1100203fff 64bit]: assigned
+[Tue Jan 20 10:17:47 2026] pci 0000:00:00.0: PCI bridge to [bus 01]
+[Tue Jan 20 10:17:47 2026] pci 0000:00:00.0:   bridge window [mem 0x1100200000-0x11002fffff]
+[Tue Jan 20 10:17:47 2026] pci_bus 0000:00: resource 4 [io  0x0000-0xfffff]
+[Tue Jan 20 10:17:47 2026] pci_bus 0000:00: resource 5 [mem 0x1100110000-0x118010ffff]
+[Tue Jan 20 10:17:47 2026] pci_bus 0000:00: resource 6 [mem 0x1800000000-0x18ffffffff pref]
+[Tue Jan 20 10:17:47 2026] pci_bus 0000:01: resource 1 [mem 0x1100200000-0x11002fffff]
+[Tue Jan 20 10:17:47 2026] nvme nvme0: pci function 0000:01:00.0
+[Tue Jan 20 10:17:47 2026] nvme 0000:01:00.0: enabling device (0000 -> 0002)
+[Tue Jan 20 10:17:47 2026] nvme nvme0: allocated 64 MiB host memory buffer.
+[Tue Jan 20 10:17:47 2026] nvme nvme0: 15/0/0 default/read/poll queues
+[Tue Jan 20 10:17:47 2026] nvme nvme0: Ignoring bogus Namespace Identifiers
+[Tue Jan 20 10:17:47 2026]  nvme0n1: p1 p2 p3
+[Tue Jan 20 10:17:47 2026] spacemit-pcie 80000000.pcie: spacemit-pcie: link is up after host_init
+[Tue Jan 20 10:17:47 2026] spacemit-pcie 81000000.pcie: pcie config device cmd fault: 0x4000033f
+[Tue Jan 20 10:17:47 2026] spacemit-pcie 81000000.pcie: pcie config device cmd in rc mode: 0x4000033f
+[Tue Jan 20 10:17:47 2026] spacemit-pcie 81000000.pcie: host bridge /soc/pcie@81000000 ranges:
+[Tue Jan 20 10:17:47 2026] spacemit-pcie 81000000.pcie:       IO 0x12c0010000..0x12c010ffff -> 0x0000000000
+[Tue Jan 20 10:17:47 2026] spacemit-pcie 81000000.pcie:      MEM 0x12c0110000..0x12ffffffff -> 0x0000110000
+[Tue Jan 20 10:17:47 2026] spacemit-pcie 81000000.pcie:      MEM 0x1300000000..0x13ffffffff -> 0x1300000000
+[Tue Jan 20 10:17:47 2026] spacemit-pcie: Starting PHY initialization...
+[Tue Jan 20 10:17:47 2026] Now int init_x1_puphy...
+[Tue Jan 20 10:17:47 2026] waiting pll lock...
+[Tue Jan 20 10:17:47 2026] PHY PLL Locked.
+[Tue Jan 20 10:17:47 2026] spacemit-pcie: PHY initialization done.
+[Tue Jan 20 10:17:47 2026] spacemit-pcie 81000000.pcie: iATU: unroll T, 16 ob, 16 ib, align 64K, limit 4G
+[Tue Jan 20 10:17:48 2026] spacemit-pcie 81000000.pcie: Phy link never came up
+[Tue Jan 20 10:17:48 2026] spacemit-pcie 81000000.pcie: PCI host bridge to bus 0004:00
+[Tue Jan 20 10:17:48 2026] pci_bus 0004:00: root bus resource [bus 00-ff]
+[Tue Jan 20 10:17:48 2026] pci_bus 0004:00: root bus resource [io  0x100000-0x1fffff] (bus address [0x0000-0xfffff])
+[Tue Jan 20 10:17:48 2026] pci_bus 0004:00: root bus resource [mem 0x12c0110000-0x12ffffffff] (bus address [0x00110000-0x3fffffff])
+[Tue Jan 20 10:17:48 2026] pci_bus 0004:00: root bus resource [mem 0x1300000000-0x13ffffffff pref]
+[Tue Jan 20 10:17:48 2026] pci 0004:00:00.0: [201f:0002] type 01 class 0x060400 PCIe Root Port
+[Tue Jan 20 10:17:48 2026] pci 0004:00:00.0: PCI bridge to [bus 01-ff]
+[Tue Jan 20 10:17:48 2026] pci 0004:00:00.0:   bridge window [io  0x100000-0x100fff]
+[Tue Jan 20 10:17:48 2026] pci 0004:00:00.0:   bridge window [mem 0x00000000-0x000fffff]
+[Tue Jan 20 10:17:48 2026] pci 0004:00:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[Tue Jan 20 10:17:48 2026] pci 0004:00:00.0: supports D1
+[Tue Jan 20 10:17:48 2026] pci 0004:00:00.0: PME# supported from D0 D1 D3hot D3cold
+[Tue Jan 20 10:17:48 2026] pci_bus 0004:01: busn_res: [bus 01-ff] end is updated to 01
+[Tue Jan 20 10:17:48 2026] pci 0004:00:00.0: PCI bridge to [bus 01]
+[Tue Jan 20 10:17:48 2026] pci_bus 0004:00: resource 4 [io  0x100000-0x1fffff]
+[Tue Jan 20 10:17:48 2026] pci_bus 0004:00: resource 5 [mem 0x12c0110000-0x12ffffffff]
+[Tue Jan 20 10:17:48 2026] pci_bus 0004:00: resource 6 [mem 0x1300000000-0x13ffffffff pref]
+[Tue Jan 20 10:17:48 2026] spacemit-pcie 81000000.pcie: spacemit-pcie: link is down after host_init
+[Tue Jan 20 10:17:48 2026] mmp-pdma d4000000.pdma: initialized 16 channels
+[Tue Jan 20 10:17:48 2026] printk: legacy console [ttyS0] disabled
+[Tue Jan 20 10:17:48 2026] d4017000.serial: ttyS0 at MMIO 0xd4017000 (irq = 53, base_baud = 921600) is a XScale
+[Tue Jan 20 10:17:48 2026] printk: legacy console [ttyS0] enabled
+[Tue Jan 20 10:17:48 2026] printk: legacy bootconsole [sbi0] disabled
+[Tue Jan 20 10:17:48 2026] [drm] spacemit_dpu_probe()
+[Tue Jan 20 10:17:48 2026] dpu_parse_dt, read hclk failed from dts!
+[Tue Jan 20 10:17:48 2026] [drm] get lcd lpm commit qos value failed
+[Tue Jan 20 10:17:48 2026] [drm] get lcd bl lpm qos value failed
+[Tue Jan 20 10:17:48 2026] [drm] get lcd lpm period value failed
+[Tue Jan 20 10:17:48 2026] [drm] dpu_rt_pm_resume() 
+[Tue Jan 20 10:17:48 2026] [drm] dpu_pm_resume()
+[Tue Jan 20 10:17:48 2026] [drm] Current aclk rate: 409600000, Target: 409000000
+[Tue Jan 20 10:17:48 2026] spacemit-k1-qspi d420c000.spi: k1_qspi_probe: memmap_base=0x0x00000000b8000000, memmap_size=0xbfffff
+[Tue Jan 20 10:17:48 2026] spacemit-k1-qspi d420c000.spi: k1_qspi_probe: host_irq:54
+[Tue Jan 20 10:17:48 2026] spacemit-k1-qspi d420c000.spi: config mfp for cs:[0]
+[Tue Jan 20 10:17:48 2026] spacemit-k1-qspi d420c000.spi: AHB buf size: 512
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: IRQ eth_lpi not found
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: IRQ sfty not found
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: tx clk from rx clk
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: phy clk is provided by a external crystal oscillator
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: phy-mode=rgmii val=0x00000208
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: User ID: 0x10, Synopsys ID: 0x54
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: 	DWMAC4/5
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: DMA HW capability register supported
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: RX Checksum Offload Engine supported
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: TX Checksum insertion supported
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: Wake-Up On Lan supported
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: TSO supported
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: Enabled L3L4 Flow TC (entries=4)
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: Enabled RFS Flow TC (entries=10)
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: Enabling HW TC (entries=256, max_off=256)
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: TSO feature enabled
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: SPH feature enabled
+[Tue Jan 20 10:17:48 2026] dwmac-spacemit-ethqos cac82000.ethernet: Using 40/40 bits DMA host/device width
+[Tue Jan 20 10:17:49 2026] phy phy-cad30000.phy.3: PHY version: 0x302 init as USB3 mode
+[Tue Jan 20 10:17:49 2026] phy phy-cad30000.phy.3: PHY version: 0x302 init as USB3 mode
+[Tue Jan 20 10:17:49 2026] gadget (null): enable vbus monitoring
+[Tue Jan 20 10:17:49 2026] onboard-usb-dev 81400000.usb3:hub@1: supply vdd not found, using dummy regulator
+[Tue Jan 20 10:17:49 2026] usb 1-1.5: USB disconnect, device number 3
+[Tue Jan 20 10:17:49 2026] MVX dev: Linlon v5276 identified. cores=4, nlsid=4, id=0, fuse=00000000, hw_id=00005276, hw_rev=00000050
+[Tue Jan 20 10:17:49 2026] sdhci-spacemit d4280000.mmc: Got CD GPIO
+[Tue Jan 20 10:17:49 2026] mmc0: SDHCI controller on d4280000.mmc [d4280000.mmc] using ADMA 64-bit
+[Tue Jan 20 10:17:49 2026] xhci-hcd xhci-hcd.0.auto: USB core suspending port 1-1 not in U0/U1/U2
+[Tue Jan 20 10:17:49 2026] onboard-usb-dev 1-1: Failed to suspend device, error -32
+[Tue Jan 20 10:17:49 2026] onboard-usb-dev 1-1: can't set config #1, error -71
+[Tue Jan 20 10:17:49 2026] xhci-hcd xhci-hcd.0.auto: USB core suspending port 1-1 not in U0/U1/U2
+[Tue Jan 20 10:17:49 2026] onboard-usb-dev 1-1: USB disconnect, device number 2
+[Tue Jan 20 10:17:49 2026] onboard-usb-dev 1-1: Failed to suspend device, error -32
+[Tue Jan 20 10:17:49 2026] onboard-usb-dev 2-1: USB disconnect, device number 2
+[Tue Jan 20 10:17:49 2026] rfkill_gpio rfkill-pcie-wlan: rfkill-pcie-wlan device registered.
+[Tue Jan 20 10:17:49 2026] rfkill_gpio rfkill-m2-bt: rfkill-m2-bt device registered.
+[Tue Jan 20 10:17:49 2026] [drm] inno_dp_probe()
+[Tue Jan 20 10:17:49 2026] [drm] spacemit_dpu_bind()
+[Tue Jan 20 10:17:49 2026] [drm] spacemit_dpu_irqs_init()
+[Tue Jan 20 10:17:49 2026] spacemit-dpu-drv soc:dpu1_crtc0: assigned reserved memory node dpu_reserved1@101d80000
+[Tue Jan 20 10:17:49 2026] [drm] dpu plane init ok
+[Tue Jan 20 10:17:49 2026] [drm] spacemit_crtc_bind_init() ok
+[Tue Jan 20 10:17:49 2026] [drm] create device file enable_dump_reg
+[Tue Jan 20 10:17:49 2026] [drm] create device file enable_dump_fps
+[Tue Jan 20 10:17:49 2026] [drm] create device file enable_auto_fc
+[Tue Jan 20 10:17:49 2026] [drm] create device file dpu_set_lpm_period
+[Tue Jan 20 10:17:49 2026] [drm] dpu driver probe success
+[Tue Jan 20 10:17:49 2026] spacemit-drm-drv c0440000.display-subsystem: bound soc:dpu1_crtc0 (ops dpu_component_ops)
+[Tue Jan 20 10:17:49 2026] [drm] inno_dp_bind()
+[Tue Jan 20 10:17:49 2026] spacemit-drm-drv c0440000.display-subsystem: bound cac88000.dp1 (ops inno_dp_ops)
+[Tue Jan 20 10:17:49 2026] [drm] Initialized spacemit 1.0.0 for c0440000.display-subsystem on minor 0
+[Tue Jan 20 10:17:49 2026] [drm] spacemit_crtc_mode_set_nofb()
+[Tue Jan 20 10:17:49 2026] [drm] dp_mode_set()
+[Tue Jan 20 10:17:49 2026] [drm] pxclk set_clk_val 148500000
+[Tue Jan 20 10:17:49 2026] [drm] get pxclk=150000000
+[Tue Jan 20 10:17:49 2026] inno_dp_init()
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x1c, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1c, val: 0xc0000000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x1c, val: 0xc0000000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1c, val: 0x0
+[Tue Jan 20 10:17:49 2026] inno_do_display:68: vic mode clock: 148500, h:1920, v:1080, vfresh:60 vtotal:1125, htotal: 2200
+[Tue Jan 20 10:17:49 2026] inno_dp_modeset() inno_dp_modeset begin
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x18, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x18, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x18, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x18, val: 0x40000000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x100, val: 0x80000100
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x100, val: 0x80000100
+[Tue Jan 20 10:17:49 2026] inno_dp_modeset() core pll config
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x180, val: 0xe13002b1
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x188, val: 0x10801
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x184, val: 0x22666666
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x184, val: 0x22000000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x198, val: 0x2a
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x198, val: 0x2002a
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x198, val: 0x2002a
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x198, val: 0x2012a
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1a0, val: 0x1500
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x180, val: 0xe1300230
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x180, val: 0xe13002b0
+[Tue Jan 20 10:17:49 2026] inno_dp_modeset() pixel pll config
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x190, val: 0x63300181
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x194, val: 0x1000801
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x198, val: 0x102012a
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x190, val: 0x63300180
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x190, val: 0x63300182
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x190, val: 0x63300182
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x180, val: 0xe13002b0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x28, val: 0x0
+[Tue Jan 20 10:17:49 2026] inno_dp_modeset() hpd config
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x18, val: 0x40000000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x18, val: 0x50000000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x84, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x84, val: 0x10000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x84, val: 0x10000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x84, val: 0x30000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x8c, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x8c, val: 0x10000000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x8c, val: 0x10000000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x8c, val: 0x30000000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x8c, val: 0x30000000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x8c, val: 0xb0000000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x80, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x88, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x88, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x88, val: 0x0
+[Tue Jan 20 10:17:49 2026] inno_dp_modeset() ana drv config
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x1b0, val: 0xf0000000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1b0, val: 0xf0000000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1c0, val: 0xf08000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1c4, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1c0, val: 0xf00000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x1c0, val: 0xf00028
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x1dc, val: 0xf0
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1dc, val: 0xff
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x1dc, val: 0xff
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1dc, val: 0xff
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x1a4, val: 0x55ff0f0f
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1a4, val: 0xffff0f0f
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x1a8, val: 0x10100055
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1a8, val: 0x101000ff
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x1a8, val: 0x101000ff
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1a8, val: 0xb0b00ff
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x1ac, val: 0x22221010
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1ac, val: 0x22220b0b
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x1ac, val: 0x22220b0b
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1ac, val: 0x22220b0b
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x1b0, val: 0xf0000000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1b0, val: 0xf0000000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x1b0, val: 0xf0000000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1b0, val: 0xff000000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x1d0, val: 0x51a
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x1d0, val: 0x151a
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x100, val: 0x80000100
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x100, val: 0x80000140
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x100, val: 0x80000140
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x100, val: 0x80000141
+[Tue Jan 20 10:17:49 2026] inno_dp_modeset() bist mode config
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x200, val: 0x400000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x224, val: 0xc00029
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x20c, val: 0x30000000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x228, val: 0x20
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x22c, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x214, val: 0x1180780
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x210, val: 0x438002d
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x21c, val: 0x58002c
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x220, val: 0x40005
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x220, val: 0x40005
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x230, val: 0x7e0000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x230, val: 0x7e0000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x218, val: 0x34c04001
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x218, val: 0x34c04001
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x200, val: 0x10400000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x238, val: 0x1000
+[Tue Jan 20 10:17:49 2026] inno_dp_modeset() training config
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x404, val: 0xe000009
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x408, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x408, val: 0x80000000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x400, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x418, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x414, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x410, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x40c, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x400, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x404, val: 0xe000009
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x408, val: 0x80000000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x408, val: 0x80000000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x400, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x418, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x414, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x410, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x40c, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x400, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x404, val: 0xe000009
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x408, val: 0x80000000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x408, val: 0x80000000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x400, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x418, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x414, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x410, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x40c, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x400, val: 0x0
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x404, val: 0xe000009
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x408, val: 0x80000000
+[Tue Jan 20 10:17:49 2026] osal_write32:48: [w] reg: 0x408, val: 0x80000000
+[Tue Jan 20 10:17:49 2026] osal_read32:55: [r] reg: 0x400, val: 0x0
+[Tue Jan 20 10:17:50 2026] osal_read32:55: [r] reg: 0x418, val: 0x0
+[Tue Jan 20 10:17:50 2026] osal_read32:55: [r] reg: 0x414, val: 0x0
+[Tue Jan 20 10:17:50 2026] osal_read32:55: [r] reg: 0x410, val: 0x0
+[Tue Jan 20 10:17:50 2026] osal_read32:55: [r] reg: 0x40c, val: 0x0
+[Tue Jan 20 10:17:50 2026] osal_read32:55: [r] reg: 0x400, val: 0x0
+[Tue Jan 20 10:17:50 2026] inno_dp_compliance_config:674: dp sink cap lane rate:0x14, lane count:0x4, enhance_mode:1
+[Tue Jan 20 10:17:50 2026] osal_read32:55: [r] reg: 0x100, val: 0x80000141
+[Tue Jan 20 10:17:50 2026] osal_write32:48: [w] reg: 0x100, val: 0x80000141
+[Tue Jan 20 10:17:50 2026] osal_read32:55: [r] reg: 0x100, val: 0x80000141
+[Tue Jan 20 10:17:50 2026] osal_write32:48: [w] reg: 0x100, val: 0x80000141
+[Tue Jan 20 10:17:50 2026] inno_dp_modeset() DPU mode
+[Tue Jan 20 10:17:50 2026] osal_write32:48: [w] reg: 0x238, val: 0x1020
+[Tue Jan 20 10:17:50 2026] inno_dp_modeset() inno_dp_modeset end
+[Tue Jan 20 10:17:50 2026] inno_do_display PMU offset 0x380:0x0
+[Tue Jan 20 10:17:50 2026] inno_do_display PMU offset 0x388:0x0
+[Tue Jan 20 10:17:50 2026] inno_do_display PMU offset 0x44:0x804000
+[Tue Jan 20 10:17:50 2026] inno_do_display PMU offset 0x4c:0x1040304
+[Tue Jan 20 10:17:50 2026] inno_do_display PMU offset 0x23c:0x30000
+[Tue Jan 20 10:17:50 2026] inno_do_display CIU offset 0x12c:0x70201
+[Tue Jan 20 10:17:50 2026] [drm] spacemit_crtc_atomic_enable(power on)
+[Tue Jan 20 10:17:50 2026] [drm] dpu_pm_resume()
+[Tue Jan 20 10:17:50 2026] [drm] Current aclk rate: 409600000, Target: 409000000
+[Tue Jan 20 10:17:50 2026] [drm] dp_encoder_enable()
+[Tue Jan 20 10:17:50 2026] [drm] DPU 1 Start!
+[Tue Jan 20 10:17:50 2026] Console: switching to colour frame buffer device 240x67
+[Tue Jan 20 10:17:50 2026] usb 1-1: new high-speed USB device number 4 using xhci-hcd
+[Tue Jan 20 10:17:50 2026] spacemit-drm-drv c0440000.display-subsystem: [drm] fb0: spacemitdrmfb frame buffer device
+[Tue Jan 20 10:17:50 2026] usb 1-1: New USB device found, idVendor=2109, idProduct=2817, bcdDevice= 7.00
+[Tue Jan 20 10:17:50 2026] PVR_K:  97: Read BVNC 36.56.104.183 from HW device registers
+[Tue Jan 20 10:17:50 2026] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[Tue Jan 20 10:17:50 2026] PVR_K:  97: RGX Device registered BVNC 36.56.104.183 with 1 core in the system
+[Tue Jan 20 10:17:50 2026] usb 1-1: Product: USB2.0 Hub             
+[Tue Jan 20 10:17:50 2026] [drm] Initialized pvr 24.2.6603887 for cac00000.imggpu on minor 1
+[Tue Jan 20 10:17:50 2026] usb 1-1: Manufacturer: VIA Labs, Inc.         
+[Tue Jan 20 10:17:50 2026] cpufreq: cpufreq_online: CPU8: Running at unlisted initial frequency: 1228800 KHz, changing to: 1300000 KHz
+[Tue Jan 20 10:17:51 2026] clk: Not disabling unused clocks
+[Tue Jan 20 10:17:51 2026] PM: genpd: Disabling unused power domains
+[Tue Jan 20 10:17:51 2026] ALSA device list:
+[Tue Jan 20 10:17:51 2026]   No soundcards found.
+[Tue Jan 20 10:17:51 2026] Freeing unused kernel image (initmem) memory: 2324K
+[Tue Jan 20 10:17:51 2026] Checked W+X mappings: passed, no W+X pages found
+[Tue Jan 20 10:17:51 2026] Run /init as init process
+[Tue Jan 20 10:17:51 2026]   with arguments:
+[Tue Jan 20 10:17:51 2026]     /init
+[Tue Jan 20 10:17:51 2026]     splash
+[Tue Jan 20 10:17:51 2026]   with environment:
+[Tue Jan 20 10:17:51 2026]     HOME=/
+[Tue Jan 20 10:17:51 2026]     TERM=linux
+[Tue Jan 20 10:17:51 2026]     mtdparts=spi-flash:128K@0(bootinfo),512K@128K(fsbl),64K@640K(env),1M@704K(esos),384K@1728K(opensbi),-@2112K(uboot)
+[Tue Jan 20 10:17:51 2026] hub 1-1:1.0: USB hub found
+[Tue Jan 20 10:17:51 2026] hub 1-1:1.0: 5 ports detected
+[Tue Jan 20 10:17:51 2026] usb 2-1: new SuperSpeed USB device number 3 using xhci-hcd
+[Tue Jan 20 10:17:51 2026] usb 2-1: New USB device found, idVendor=2109, idProduct=0817, bcdDevice= 7.00
+[Tue Jan 20 10:17:51 2026] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[Tue Jan 20 10:17:51 2026] dwmac-spacemit-ethqos cac82000.ethernet end1: renamed from eth0
+[Tue Jan 20 10:17:51 2026] usb 2-1: Product: USB3.0 Hub             
+[Tue Jan 20 10:17:51 2026] usb 2-1: Manufacturer: VIA Labs, Inc.         
+[Tue Jan 20 10:17:51 2026] fusb301 0-0025: Device ID = 0x12
+[Tue Jan 20 10:17:51 2026] hub 2-1:1.0: USB hub found
+[Tue Jan 20 10:17:51 2026] fusb301 0-0025: fusb301 set opmode: 1.5A
+[Tue Jan 20 10:17:51 2026] hub 2-1:1.0: 4 ports detected
+[Tue Jan 20 10:17:51 2026] fusb301 0-0025: fusb301 set toggle time: Toggle_35ms
+[Tue Jan 20 10:17:51 2026] fusb301 0-0025: fusb301 set mode: Drp_Acc
+[Tue Jan 20 10:17:51 2026] fusb301 0-0025: fusb301 set state: Error_Recovery
+[Tue Jan 20 10:17:51 2026] fusb301 0-0025: fusb301_detach: Error_Recovery
+[Tue Jan 20 10:17:51 2026] fusb301 0-0025: mode[0x20], host_cur[0x02], dttime[0x00]
+[Tue Jan 20 10:17:51 2026] usb 1-1.5: new high-speed USB device number 5 using xhci-hcd
+[Tue Jan 20 10:17:51 2026] usb 1-1.5: New USB device found, idVendor=2109, idProduct=8817, bcdDevice= 0.01
+[Tue Jan 20 10:17:51 2026] usb 1-1.5: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[Tue Jan 20 10:17:51 2026] usb 1-1.5: Product: USB Billboard Device   
+[Tue Jan 20 10:17:51 2026] usb 1-1.5: Manufacturer: VIA Labs, Inc.         
+[Tue Jan 20 10:17:51 2026] usb 1-1.5: SerialNumber: 0000000000000001
+[Tue Jan 20 10:17:52 2026] EXT4-fs (nvme0n1p3): orphan cleanup on readonly fs
+[Tue Jan 20 10:17:52 2026] EXT4-fs (nvme0n1p3): mounted filesystem fe62cacd-a6b5-4dbe-8cdc-3ecfb2d098be ro with ordered data mode. Quota mode: none.
+[Tue Jan 20 10:17:52 2026] systemd[1]: System time advanced to timestamp on /var/lib/systemd/timesync/clock: Sun 2026-01-18 08:18:04 CET
+[Tue Jan 20 10:17:52 2026] systemd[1]: Inserted module 'autofs4'
+[Tue Jan 20 10:17:52 2026] systemd[1]: systemd 257.9-0ubuntu2 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -BTF -XKBCOMMON -UTMP +SYSVINIT +LIBARCHIVE)
+[Tue Jan 20 10:17:52 2026] systemd[1]: Detected architecture riscv64.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Hostname set to <spacemit>.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Configuration file /usr/lib/systemd/system/multimedia.service is marked executable. Please remove executable permission bits. Proceeding anyway.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Queued start job for default target graphical.target.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Created slice system-cups.slice - CUPS Slice.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Created slice system-systemd\x2dfsck.slice - Slice /system/systemd-fsck.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Created slice user.slice - User and Session Slice.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Expecting device dev-disk-by\x2duuid-3072ee23\x2d2e03\x2d441d\x2dad57\x2d1c7c4b864de6.device - /dev/disk/by-uuid/3072ee23-2e03-441d-ad57-1c7c4b864de6...
+[Tue Jan 20 10:17:52 2026] systemd[1]: Expecting device dev-ttyS0.device - /dev/ttyS0...
+[Tue Jan 20 10:17:52 2026] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Reached target remote-fs.target - Remote File Systems.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Reached target slices.target - Slice Units.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Reached target snapd.mounts-pre.target - Mounting snaps.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Reached target swap.target - Swaps.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Listening on syslog.socket - Syslog Socket.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[Tue Jan 20 10:17:52 2026] systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+[Tue Jan 20 10:17:52 2026] systemd[1]: Listening on systemd-oomd.socket - Userspace Out-Of-Memory (OOM) Killer Socket.
+[Tue Jan 20 10:17:52 2026] systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+[Tue Jan 20 10:17:52 2026] systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+[Tue Jan 20 10:17:53 2026] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[Tue Jan 20 10:17:53 2026] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[Tue Jan 20 10:17:53 2026] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+[Tue Jan 20 10:17:53 2026] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[Tue Jan 20 10:17:53 2026] systemd[1]: Mounting run-lock.mount - Legacy Locks Directory /run/lock...
+[Tue Jan 20 10:17:53 2026] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[Tue Jan 20 10:17:53 2026] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+[Tue Jan 20 10:17:53 2026] systemd[1]: Mounting tmp.mount - Temporary Directory /tmp...
+[Tue Jan 20 10:17:53 2026] systemd[1]: Starting systemd-journald.service - Journal Service...
+[Tue Jan 20 10:17:53 2026] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+[Tue Jan 20 10:17:53 2026] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[Tue Jan 20 10:17:53 2026] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+[Tue Jan 20 10:17:53 2026] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+[Tue Jan 20 10:17:53 2026] systemd-journald[394]: Collecting audit messages is disabled.
+[Tue Jan 20 10:17:53 2026] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+[Tue Jan 20 10:17:53 2026] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+[Tue Jan 20 10:17:53 2026] systemd[1]: systemd-fsck-root.service - File System Check on Root Device was skipped because of an unmet condition check (ConditionPathExists=!/run/initramfs/fsck-root).
+[Tue Jan 20 10:17:53 2026] systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info was skipped because of an unmet condition check (ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67).
+[Tue Jan 20 10:17:53 2026] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[Tue Jan 20 10:17:53 2026] systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+[Tue Jan 20 10:17:53 2026] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+[Tue Jan 20 10:17:53 2026] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+[Tue Jan 20 10:17:53 2026] systemd[1]: Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+[Tue Jan 20 10:17:53 2026] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[Tue Jan 20 10:17:53 2026] systemd[1]: Started systemd-journald.service - Journal Service.
+[Tue Jan 20 10:17:53 2026] EXT4-fs (nvme0n1p3): re-mounted fe62cacd-a6b5-4dbe-8cdc-3ecfb2d098be r/w. Quota mode: none.
+[Tue Jan 20 10:17:53 2026] systemd-journald[394]: Received client request to flush runtime journal.
+[Tue Jan 20 10:17:53 2026] systemd-journald[394]: File /var/log/journal/58045e0d7f244f0fa755d6a3a5a8e8fd/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[Tue Jan 20 10:17:53 2026] CAN device driver interface
+[Tue Jan 20 10:17:54 2026] loop0: detected capacity change from 0 to 74312
+[Tue Jan 20 10:17:54 2026] loop1: detected capacity change from 0 to 130768
+[Tue Jan 20 10:17:54 2026] EXT4-fs (nvme0n1p2): mounted filesystem 3072ee23-2e03-441d-ad57-1c7c4b864de6 r/w with ordered data mode. Quota mode: none.
+[Tue Jan 20 10:17:54 2026] loop2: detected capacity change from 0 to 157920
+[Tue Jan 20 10:17:54 2026] loop3: detected capacity change from 0 to 85344
+[Tue Jan 20 10:17:54 2026] audit: type=1400 audit(1768720686.780:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ch-run" pid=824 comm="apparmor_parser"
+[Tue Jan 20 10:17:54 2026] audit: type=1400 audit(1768720686.780:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="brave" pid=818 comm="apparmor_parser"
+[Tue Jan 20 10:17:54 2026] audit: type=1400 audit(1768720686.780:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="QtWebEngineProcess" pid=811 comm="apparmor_parser"
+[Tue Jan 20 10:17:54 2026] audit: type=1400 audit(1768720686.780:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ch-checkns" pid=822 comm="apparmor_parser"
+[Tue Jan 20 10:17:54 2026] audit: type=1400 audit(1768720686.780:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="buildah" pid=819 comm="apparmor_parser"
+[Tue Jan 20 10:17:54 2026] audit: type=1400 audit(1768720686.780:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="bwrap" pid=820 comm="apparmor_parser"
+[Tue Jan 20 10:17:54 2026] audit: type=1400 audit(1768720686.780:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="unpriv_bwrap" pid=820 comm="apparmor_parser"
+[Tue Jan 20 10:17:54 2026] audit: type=1400 audit(1768720686.780:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="balena-etcher" pid=815 comm="apparmor_parser"
+[Tue Jan 20 10:17:54 2026] audit: type=1400 audit(1768720686.784:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="cam" pid=821 comm="apparmor_parser"
+[Tue Jan 20 10:17:54 2026] audit: type=1400 audit(1768720686.784:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name=4D6F6E676F444220436F6D70617373 pid=810 comm="apparmor_parser"
+[Tue Jan 20 10:17:56 2026] NET: Registered PF_QIPCRTR protocol family
+[Tue Jan 20 10:17:56 2026] loop4: detected capacity change from 0 to 8
+[Tue Jan 20 10:17:56 2026] systemd-journald[394]: File /var/log/journal/58045e0d7f244f0fa755d6a3a5a8e8fd/user-60578.journal corrupted or uncleanly shut down, renaming and replacing.
+[Tue Jan 20 10:17:57 2026] dwmac-spacemit-ethqos cac82000.ethernet end1: Register MEM_TYPE_PAGE_POOL RxQ-0
+[Tue Jan 20 10:17:57 2026] dwmac-spacemit-ethqos cac82000.ethernet end1: PHY [stmmac-1:01] driver [Generic PHY] (irq=POLL)
+[Tue Jan 20 10:17:57 2026] dwmac4: Master AXI performs any burst length
+[Tue Jan 20 10:17:57 2026] dwmac-spacemit-ethqos cac82000.ethernet end1: No Safety Features support found
+[Tue Jan 20 10:17:57 2026] dwmac-spacemit-ethqos cac82000.ethernet end1: IEEE 1588-2008 Advanced Timestamp supported
+[Tue Jan 20 10:17:57 2026] dwmac-spacemit-ethqos cac82000.ethernet end1: configuring for phy/rgmii link mode
+[Tue Jan 20 10:17:58 2026] PVR_K:  1533: RGX Firmware image 'rgx.fw.36.56.104.183' loaded
+[Tue Jan 20 10:17:58 2026] PVR_K:  1533: Shader binary image 'rgx.sh.36.56.104.183' loaded
+[Tue Jan 20 10:18:00 2026] dwmac-spacemit-ethqos cac82000.ethernet end1: Link is Up - 1Gbps/Full - flow control off
+[Tue Jan 20 10:18:01 2026] rfkill: input handler disabled
