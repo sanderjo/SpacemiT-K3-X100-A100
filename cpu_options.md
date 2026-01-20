@@ -1,13 +1,19 @@
-What's in `/proc/cpuinfo`:
+What's in `/proc/cpuinfo`: what options:
 ```
-superkoning@spacemit:~$ cat /proc/cpuinfo | grep isa | head -1 | awk '{ print $NF }' | sed 's/_/ -e /g'
-rv64imafdcv -e zicbom -e zicboz -e zicntr -e zicond -e zicsr -e zifencei -e zihintntl -e zihintpause -e zihpm -e zimop -e zawrs -e zfa -e zfh -e zfhmin -e zca -e zcb -e zcd -e zcmop -e zba -e zbb -e zbc -e zbs -e zkt -e zvbb -e zvbc -e zve32f -e zve32x -e zve64d -e zve64f -e zve64x -e zvfh -e zvfhmin -e zvkb -e zvkg -e zvkned -e zvknha -e zvknhb -e zvksed -e zvksh -e zvkt -e sdtrig -e smaia -e smstateen -e ssaia -e sscofpmf -e sstc -e svinval -e svnapot -e svpbmt
+superkoning@spacemit:~$ cat /proc/cpuinfo | grep isa | head -1 | awk '{ print $NF }' | sed 's/_/ " -e "/g'
+rv64imafdcv " -e "zicbom " -e "zicboz " -e "zicntr " -e "zicond " -e "zicsr " -e "zifencei " -e "zihintntl " -e "zihintpause " -e "zihpm " -e "zimop " -e "zawrs " -e "zfa " -e "zfh " -e "zfhmin " -e "zca " -e "zcb " -e "zcd " -e "zcmop " -e "zba " -e "zbb " -e "zbc " -e "zbs " -e "zkt " -e "zvbb " -e "zvbc " -e "zve32f " -e "zve32x " -e "zve64d " -e "zve64f " -e "zve64x " -e "zvfh " -e "zvfhmin " -e "zvkb " -e "zvkg " -e "zvkned " -e "zvknha " -e "zvknhb " -e "zvksed " -e "zvksh " -e "zvkt " -e "sdtrig " -e "smaia " -e "smstateen " -e "ssaia " -e "sscofpmf " -e "sstc " -e "svinval " -e "svnapot " -e "svpbmt
+
 
 ```
 Let clang explain what those options mean
 
 ```
-superkoning@spacemit:~$ clang --target=riscv64 --print-supported-extensions 2>&1 | grep -e rv64imafdcv -e zicbom -e zicboz -e zicntr -e zicond -e zicsr -e zifencei -e zihintntl -e zihintpause -e zihpm -e zimop -e zawrs -e zfa -e zfh -e zfhmin -e zca -e zcb -e zcd -e zcmop -e zba -e zbb -e zbc -e zbs -e zkt -e zvbb -e zvbc -e zve32f -e zve32x -e zve64d -e zve64f -e zve64x -e zvfh -e zvfhmin -e zvkb -e zvkg -e zvkned -e zvknha -e zvknhb -e zvksed -e zvksh -e zvkt -e sdtrig -e smaia -e smstateen -e ssaia -e sscofpmf -e sstc -e svinval -e svnapot -e svpbmt
+
+superkoning@spacemit:~$ clang --target=riscv64 --print-supported-extensions | grep -e "rv64imafdcv " -e "zicbom " -e "zicboz " -e "zicntr " -e "zicond " -e "zicsr " -e "zifencei " -e "zihintntl " -e "zihintpause " -e "zihpm " -e "zimop " -e "zawrs " -e "zfa " -e "zfh " -e "zfhmin " -e "zca " -e "zcb " -e "zcd " -e "zcmop " -e "zba " -e "zbb " -e "zbc " -e "zbs " -e "zkt " -e "zvbb " -e "zvbc " -e "zve32f " -e "zve32x " -e "zve64d " -e "zve64f " -e "zve64x " -e "zvfh " -e "zvfhmin " -e "zvkb " -e "zvkg " -e "zvkned " -e "zvknha " -e "zvknhb " -e "zvksed " -e "zvksh " -e "zvkt " -e "sdtrig " -e "smaia " -e "smstateen " -e "ssaia " -e "sscofpmf " -e "sstc " -e "svinval " -e "svnapot " -e "svpbmt "
+Ubuntu clang version 21.1.6 (3ubuntu1)
+Target: riscv64
+Thread model: posix
+InstalledDir: /usr/lib/llvm-21/bin
     zicbom               1.0       'Zicbom' (Cache-Block Management Instructions)
     zicboz               1.0       'Zicboz' (Cache-Block Zero Instructions)
     zicntr               2.0       'Zicntr' (Base Counters and Timers)
@@ -57,7 +63,7 @@ superkoning@spacemit:~$ clang --target=riscv64 --print-supported-extensions 2>&1
     svinval              1.0       'Svinval' (Fine-Grained Address-Translation Cache Invalidation)
     svnapot              1.0       'Svnapot' (NAPOT Translation Contiguity)
     svpbmt               1.0       'Svpbmt' (Page-Based Memory Types)
-    zvbc32e              0.7       'Zvbc32e' (Vector Carryless Multiplication with 32-bits elements)
-    zvkgs                0.7       'Zvkgs' (Vector-Scalar GCM instructions for Cryptography)
+superkoning@spacemit:~$ 
+
 
 ```
