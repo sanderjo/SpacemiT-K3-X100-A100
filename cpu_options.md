@@ -132,4 +132,22 @@ superkoning@spacemit:~/clang$
 
 ```
 
+And the meaning of the main cpu options:
+```
+superkoning@spacemit:~/clang$ cat /proc/cpuinfo | grep "hart isa" | head -1 | awk '{ print $NF }' | tr "_" "\n" | head -1
+rv64imafdcvh
 
+```
+with meaning:
+```
+superkoning@spacemit:~/clang$ cat /proc/cpuinfo | grep "hart isa" | head -1 | awk '{ print $NF }' | tr "_" "\n" | head -1 | cut -c5- |  fold -w 1 | awk '{ print "grep \" " $1 " \" clang_options.txt " }' | sh
+    i                    2.1       'I' (Base Integer Instruction Set)
+    m                    2.0       'M' (Integer Multiplication and Division)
+    a                    2.1       'A' (Atomic Instructions)
+    f                    2.2       'F' (Single-Precision Floating-Point)
+    d                    2.2       'D' (Double-Precision Floating-Point)
+    c                    2.0       'C' (Compressed Instructions)
+    v                    1.0       'V' (Vector Extension for Application Processors)
+    h                    1.0       'H' (Hypervisor)
+
+```
