@@ -1,3 +1,5 @@
+# First, manual stuff
+
 What's in `/proc/cpuinfo`: what options:
 ```
 superkoning@spacemit:~$ cat /proc/cpuinfo | grep isa | head -1 | awk '{ print $NF }' | sed 's/_/ " -e "/g'
@@ -68,7 +70,7 @@ superkoning@spacemit:~$
 
 ```
 
-Or fully automated:
+# Fully automated:
 
 ```
 superkoning@spacemit:~/clang$ clang --target=riscv64 --print-supported-extensions  > clang_options.txt
@@ -77,7 +79,9 @@ Target: riscv64
 Thread model: posix
 InstalledDir: /usr/lib/llvm-21/bin
 
-superkoning@spacemit:~/clang$ cat /proc/cpuinfo | grep isa | head -1 | awk '{ print $NF }' | tr "_" "\n" | awk '{ print "grep \"" $1 " \" clang_options.txt " }' | sh | sort 
+
+
+superkoning@spacemit:~/clang$ cat /proc/cpuinfo | grep isa | head -1 | awk '{ print $NF }' | tr "_" "\n" | awk '{ print "grep \" " $1 " \" clang_options.txt " }' | sh | sort 
     sdtrig               1.0       'Sdtrig' (Debugger triggers)
     smaia                1.0       'Smaia' (Advanced Interrupt Architecture Machine Level)
     smstateen            1.0       'Smstateen' (Machine-mode view of the state-enable extension)
