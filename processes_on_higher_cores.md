@@ -23,7 +23,7 @@ and indeed, now a `make -j16` of the python3 sourcecode runs on cores 8-15:
 Or in text: See column 7 = "PSR       processor that process last executed on.": the gcc stuff is running on cores 8 - 15.
 
 ```
-superkoning@spacemit:~$ ps -eF | head -3
+superkoning@spacemit:~$ ps -eF
 UID          PID    PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
 root           1       0  0  5293 13788   0 Jan20 ?        00:00:31 /sbin/init splash
 root           2       0  0     0     0   1 Jan20 ?        00:00:00 [kthreadd]
