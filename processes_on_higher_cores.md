@@ -60,3 +60,38 @@ superko+  184291  184290 99 30407 80884  13 08:18 pts/1    00:00:02 /usr/libexec
 superko+  184294  179296  0  3018  3852   3 08:18 pts/3    00:00:00 ps -eF
 superkoning@spacemit:~$ 
 ```
+
+# Ugly randomizer
+
+How about this: 
+- Start `make -j16`, which will start the gcc processes on the first 8 cores, 16 processes in parallel, and a new after one has finishes
+- Continously run a seperate script that moves some of those processes to the AI cores
+
+Bingo ... some processes still on the first 8 cores, but also processes on the higher 8 cores!
+
+<img width="2016" height="1366" alt="image" src="https://github.com/user-attachments/assets/cf6c6ecb-dbb1-4479-bdca-13d5bd1ca688" />
+
+
+Hacky: just move the first 15 processes with `gcc` in it to the AI cores:
+```
+superkoning@spacemit:~$ cat randomize_gcc.sh
+ps -eF | grep  -e gcc | grep -vi grep |  awk '{ print "echo " $2 " > /proc/set_ai_thread " }'   | head -15 | sh
+```
+and run that script:
+```
+superkoning@spacemit:~$ while true; do ./randomize_gcc.sh; sleep 0.2; done
+```
+Then start `make clean && make -j16`
+
+
+But ... does it work reliably? No: an `internal compiler error: Segmentation fault`:
+
+```
+gcc -c -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 -Wall    -std=c11 -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wstrict-prototypes -Werror=implicit-function-declaration -fvisibility=hidden  -I./Include/internal -I./Include/internal/mimalloc  -I. -I./Include    -DPy_BUILD_CORE -o Objects/classobject.o Objects/classobject.c
+during RTL pass: final
+Parser/pegen.c: In function ‘_PyPegen_new_identifier’:
+Parser/pegen.c:569:1: internal compiler error: Segmentation fault
+  569 | }
+      | ^
+gcc -c -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 -Wall    -std=c11 -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wstrict-prototypes -Werror=implicit-function-declaration -fvisibility=hidden  -I./Include/internal -I./Include/internal/mimalloc  -I. -I./Include    -DPy_BUILD_CORE -o Objects/codeobject.o Objects/codeobject.c
+```
