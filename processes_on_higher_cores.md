@@ -95,3 +95,50 @@ Parser/pegen.c:569:1: internal compiler error: Segmentation fault
       | ^
 gcc -c -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 -Wall    -std=c11 -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wstrict-prototypes -Werror=implicit-function-declaration -fvisibility=hidden  -I./Include/internal -I./Include/internal/mimalloc  -I. -I./Include    -DPy_BUILD_CORE -o Objects/codeobject.o Objects/codeobject.c
 ```
+
+
+# Randomizer with 'stress'
+
+```
+superkoning@spacemit:~$ stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+stress: info: [242563] dispatching hogs: 16 cpu, 4 io, 2 vm, 0 hdd
+```
+
+```
+superkoning@spacemit:~$ cat randomize_stress.sh
+ps -eF | grep  -e stress | grep -vi grep |  awk '{ print "echo " $2 " > /proc/set_ai_thread " }'   | head -10 | sh
+```
+After running that: some `stress` processes on higher cores, some on the lower cores
+
+```
+superkoning@spacemit:~$ ps -eF | grep  -e stress | grep -vi grep
+superko+  242563  189526  0   653  1168   0 10:27 pts/5    00:00:00 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242564  242563 88   653   404   9 10:27 pts/5    00:04:20 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242565  242563  8   653   404  13 10:27 pts/5    00:00:26 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242566  242563 83 33422 104748 11 10:27 pts/5    00:04:06 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242567  242563 88   653   404  12 10:27 pts/5    00:04:21 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242568  242563  9   653   404  13 10:27 pts/5    00:00:27 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242569  242563 84 33422 89436  14 10:27 pts/5    00:04:09 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242570  242563 83   653   404  15 10:27 pts/5    00:04:04 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242571  242563  9   653   404  13 10:27 pts/5    00:00:26 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242572  242563 82   653   404   8 10:27 pts/5    00:04:02 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242573  242563 11   653   404   1 10:27 pts/5    00:00:32 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242574  242563 58   653   404   2 10:27 pts/5    00:02:52 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242575  242563 61   653   404   3 10:27 pts/5    00:03:00 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242576  242563 56   653   404   7 10:27 pts/5    00:02:46 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242577  242563 57   653   404   4 10:27 pts/5    00:02:49 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242578  242563 54   653   404   0 10:27 pts/5    00:02:41 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242579  242563 57   653   404   4 10:27 pts/5    00:02:49 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242580  242563 56   653   404   6 10:27 pts/5    00:02:47 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242581  242563 63   653   404   1 10:27 pts/5    00:03:07 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242582  242563 59   653   404   5 10:27 pts/5    00:02:53 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242583  242563 56   653   404   3 10:27 pts/5    00:02:45 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242584  242563 59   653   404   7 10:27 pts/5    00:02:56 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superko+  242585  242563 59   653   404   2 10:27 pts/5    00:02:56 stress --cpu 16 --io 4 --vm 2 --vm-bytes 128M --timeout 1000s
+superkoning@spacemit:~$
+```
+
+
+
+<img width="2001" height="1650" alt="image" src="https://github.com/user-attachments/assets/5875a9f5-1ef4-404e-acd9-fde3e6823785" />
+
