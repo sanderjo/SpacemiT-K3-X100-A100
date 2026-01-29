@@ -1,0 +1,44 @@
+superkoning@spacemit:~$ lscpu
+Architecture:             riscv64
+  Byte Order:             Little Endian
+CPU(s):                   16
+  On-line CPU(s) list:    0-15
+Vendor ID:                0x710
+  Model name:             Spacemit(R) A100
+    CPU family:           0x8000000041000002
+    Model:                0x10000000d5686200
+    Thread(s) per core:   1
+    Core(s) per socket:   8
+    Socket(s):            1
+    CPU(s) scaling MHz:   100%
+    CPU max MHz:          2000.0000
+    CPU min MHz:          614.4000
+  Model name:             Spacemit(R) X100
+    CPU family:           0x8000000058000002
+    Model:                0x33d8a600
+    Thread(s) per core:   1
+    Core(s) per socket:   8
+    Socket(s):            1
+    CPU(s) scaling MHz:   100%
+    CPU max MHz:          2400.0000
+    CPU min MHz:          614.4000
+Caches (sum of all):
+  L1d:                    1 MiB (16 instances)
+  L1i:                    1 MiB (16 instances)
+  L2:                     10 MiB (4 instances)
+Vulnerabilities:
+  Gather data sampling:   Not affected
+  Itlb multihit:          Not affected
+  L1tf:                   Not affected
+  Mds:                    Not affected
+  Meltdown:               Not affected
+  Mmio stale data:        Not affected
+  Reg file data sampling: Not affected
+  Retbleed:               Not affected
+  Spec rstack overflow:   Not affected
+  Spec store bypass:      Not affected
+  Spectre v1:             Not affected
+  Spectre v2:             Not affected
+  Srbds:                  Not affected
+  Tsx async abort:        Not affected
+superkoning@spacemit:~$ l
