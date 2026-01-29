@@ -1,3 +1,13 @@
+# short
+```
+superkoning@spacemit:~$ lspci
+0000:00:00.0 PCI bridge: SpacemiT Device 0002 (rev 01)
+0000:01:00.0 Non-Volatile memory controller: Silicon Motion, Inc. SM2263EN/SM2263XT (DRAM-less) NVMe SSD Controllers (rev 03)
+0004:00:00.0 PCI bridge: SpacemiT Device 0002 (rev 01)
+superkoning@spacemit:~$
+```
+
+# verbose/long, with sudo
 ```
 superkoning@spacemit:~$ sudo lspci -vv
 [sudo: authenticate] Password:
