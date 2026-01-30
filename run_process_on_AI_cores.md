@@ -1,6 +1,6 @@
 # Run process on the AI cores
 
-If you use the bash trick `echo $$ > /proc/set ` ... all following (sub)processes run on the AI cores.
+If you use the bash trick `echo $$ > /proc/set_ai_thread` ... all following (sub)processes run on the AI cores. Handy.
 
 If you only want to start & run one process (or progam) on the AI cores, @brucehoult has made a method for that:
 
