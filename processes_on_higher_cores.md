@@ -14,6 +14,12 @@ superkoning@spacemit:~$ ps
 superkoning@spacemit:~$ echo 179205 > /proc/set_ai_thread
 superkoning@spacemit:~$
 ```
+EDIT: shorter
+
+```
+echo $$ > /proc/set_ai_thread
+```
+
 and indeed, now a `make -j16` of the python3 sourcecode runs on cores 8-15:
 
 <img width="1147" height="735" alt="image" src="https://github.com/user-attachments/assets/59b22464-71ae-48cf-9aa6-6deefa0373ba" />
