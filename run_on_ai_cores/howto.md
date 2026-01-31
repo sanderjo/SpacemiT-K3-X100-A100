@@ -1,3 +1,5 @@
+# run_on_ai_cores
+
 Bruce Hoult has created program and a wrapper script to run commands on the AI cores:
 ```
 superkoning@spacemit:~ ls -al /usr/local/bin/ai*
