@@ -28,12 +28,31 @@ superkoning@spacemit:~/run_on_ai_cores$
 
 ```
 
-And into `/usr/local/bin/`
+And into `/usr/local/bin/` so it's available for all users on this remote K3 provided by SpacemiT.
 
 
 ```
 superkoning@spacemit:~/run_on_ai_cores$ sudo cp run_on_ai_cores /usr/local/bin/
 superkoning@spacemit:~/run_on_ai_cores$ 
+```
+
+```
+# normal commands
+superkoning@spacemit:~$ run_on_ai_cores
+run_on_ai_cores
+superkoning@spacemit:~$ run_on_ai_cores echo $$
+952505
+superkoning@spacemit:~$ run_on_ai_cores uptime
+ 11:49:06 up 11 days,  1:31, 10 users,  load average: 0.02, 0.33, 1.02
+superkoning@spacemit:~$ 
+
+# interesting command
+superkoning@spacemit:~$ run_on_ai_cores stress --cpu 20 --io 4 --vm 2 --vm-bytes 128M --timeout 5s
+stress: info: [952729] dispatching hogs: 20 cpu, 4 io, 2 vm, 0 hdd
+stress: info: [952729] successful run completed in 5s
+superkoning@spacemit:~$ 
+
+
 ```
 
 
