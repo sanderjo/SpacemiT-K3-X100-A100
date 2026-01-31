@@ -7,9 +7,7 @@ superkoning@spacemit:~ ls -al /usr/local/bin/ai*
 Of course that works. I think aix is written in assembly, but I've no source code and I don't understand RISC-V assembly
 
 
-So I used a certain tool to create a C program that does the same. See 
-
-[run_on_ai_cores/run_on_ai_cores.c](https://github.com/sanderjo/SpacemiT-K3-X100-A100/blob/main/run_on_ai_cores/run_on_ai_cores.c)
+So I used a certain tool to create a C program that does the same. See  [run_on_ai_cores/run_on_ai_cores.c](https://github.com/sanderjo/SpacemiT-K3-X100-A100/blob/main/run_on_ai_cores/run_on_ai_cores.c)
 ```
 superkoning@spacemit:~/run_on_ai_cores$ ll
 total 32
