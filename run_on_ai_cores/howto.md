@@ -1,14 +1,14 @@
-# run_on_ai_cores
+# run_on_ai_cores to run a commandline on the K3 AI cores
 
 ## Start
 
-Bruce Hoult has created program and a wrapper script to run commands on the AI cores:
+Bruce Hoult has a created program and a wrapper script to run commands on the AI cores:
 ```
 superkoning@spacemit:~ ls -al /usr/local/bin/ai*
 -rwxr-xr-x 1 root root   73 Jan 29 03:58 /usr/local/bin/ai
 -rwxr-xr-x 1 root root 6520 Jan 29 03:09 /usr/local/bin/aix
 ```
-That works on the K3 provided by `SpacemiT`. The shell script `ai` is the wrapper for `aix`. I think `aix` is written in assembly, but I've no source code and I don't understand RISC-V assembly
+That works on the K3 provided by SpacemiT. The shell script `ai` is the wrapper for `aix`. I think `aix` is written in assembly, but I've no source code and I don't understand RISC-V assembly
 
 ## C program run_on_ai_cores
 
@@ -33,7 +33,7 @@ superkoning@spacemit:~/run_on_ai_cores$
 
 ```
 
-And into `/usr/local/bin/` so it's available for all users on this remote K3 provided by SpacemiT.
+And copied into `/usr/local/bin/` so it's available for all users on this remote K3 provided by SpacemiT.
 
 
 ```
@@ -60,5 +60,6 @@ superkoning@spacemit:~$
 
 ```
 
+`btop` shows AI cores in use:
 
 <img width="1076" height="738" alt="image" src="https://github.com/user-attachments/assets/c8a365f2-5695-4309-94f2-157a5cf149d5" />
