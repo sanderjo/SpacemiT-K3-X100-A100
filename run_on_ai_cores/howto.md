@@ -6,10 +6,10 @@ superkoning@spacemit:~ ls -al /usr/local/bin/ai*
 -rwxr-xr-x 1 root root   73 Jan 29 03:58 /usr/local/bin/ai
 -rwxr-xr-x 1 root root 6520 Jan 29 03:09 /usr/local/bin/aix
 ```
-Of course that works. I think aix is written in assembly, but I've no source code and I don't understand RISC-V assembly
+That works on the K3 provided by `SpacemiT`. The shell script `ai` is the wrapper for `aix`. I think `aix` is written in assembly, but I've no source code and I don't understand RISC-V assembly
 
 
-So I used a certain tool to create a C program that does the same. See  [run_on_ai_cores/run_on_ai_cores.c](https://github.com/sanderjo/SpacemiT-K3-X100-A100/blob/main/run_on_ai_cores/run_on_ai_cores.c)
+So I used a certain tool to create a C program that does the same: run a commandline on the AI cores (Core 8 -15). See  [run_on_ai_cores/run_on_ai_cores.c](https://github.com/sanderjo/SpacemiT-K3-X100-A100/blob/main/run_on_ai_cores/run_on_ai_cores.c)
 ```
 superkoning@spacemit:~/run_on_ai_cores$ ll
 total 32
