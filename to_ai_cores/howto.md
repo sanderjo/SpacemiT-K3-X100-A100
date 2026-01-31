@@ -5,7 +5,7 @@ superkoning@spacemit:~/to_ai_cores$ ls -al /usr/local/bin/ai*
 -rwxr-xr-x 1 root root 6520 Jan 29 03:09 /usr/local/bin/aix
 ```
 
-I used a certain tool to create a C program that does the same
+I used a certain tool to create a C program that does the same. See https://github.com/sanderjo/SpacemiT-K3-X100-A100/blob/main/to_ai_cores/to_ai_cores.c
 
 ```
 superkoning@spacemit:~/to_ai_cores$ ll
