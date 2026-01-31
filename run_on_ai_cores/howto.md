@@ -1,5 +1,7 @@
 # run_on_ai_cores
 
+## Start
+
 Bruce Hoult has created program and a wrapper script to run commands on the AI cores:
 ```
 superkoning@spacemit:~ ls -al /usr/local/bin/ai*
@@ -8,8 +10,9 @@ superkoning@spacemit:~ ls -al /usr/local/bin/ai*
 ```
 That works on the K3 provided by `SpacemiT`. The shell script `ai` is the wrapper for `aix`. I think `aix` is written in assembly, but I've no source code and I don't understand RISC-V assembly
 
+## C program run_on_ai_cores
 
-So I used a certain tool to create a C program that does the same: run a commandline on the AI cores (Core 8 -15). See  [run_on_ai_cores/run_on_ai_cores.c](https://github.com/sanderjo/SpacemiT-K3-X100-A100/blob/main/run_on_ai_cores/run_on_ai_cores.c)
+So I used a certain tool to create a C program that does the same: run a commandline on the AI cores (Core 8 -15). See source code [run_on_ai_cores/run_on_ai_cores.c](https://github.com/sanderjo/SpacemiT-K3-X100-A100/blob/main/run_on_ai_cores/run_on_ai_cores.c)
 ```
 superkoning@spacemit:~/run_on_ai_cores$ ll
 total 32
