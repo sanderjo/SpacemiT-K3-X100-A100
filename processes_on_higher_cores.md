@@ -1,5 +1,23 @@
 # How to run process on the higher ("AI"?) cores
 
+## TLDR
+```
+superkoning@spacemit:~$ cat /usr/local/bin/run_on_ai_cores 
+#!/bin/bash
+echo $$ > /proc/set_ai_thread && exec "$@"
+```
+
+Then run like
+```
+run_on_ai_cores stress make -j16
+```
+and
+```
+run_on_ai_cores stress --cpu 20 --io 4 --vm 2 --vm-bytes 128M --timeout 30s
+```
+
+## Long
+
 A SpacemiT person said:
 
 > Use `ps` to find the current bash process ID (PID).
