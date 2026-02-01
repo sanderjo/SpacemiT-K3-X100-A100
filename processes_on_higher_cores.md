@@ -7,7 +7,7 @@ superkoning@spacemit:~$ cat /usr/local/bin/run_on_ai_cores
 echo $$ > /proc/set_ai_thread && exec "$@"
 ```
 
-Then run like
+Then run like this:
 ```
 run_on_ai_cores stress make -j16
 ```
