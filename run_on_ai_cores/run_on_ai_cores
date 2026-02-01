@@ -1,0 +1,2 @@
+#!/bin/bash
+echo $$ > /proc/set_ai_thread && exec "$@"
