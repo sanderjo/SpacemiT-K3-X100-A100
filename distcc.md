@@ -1,19 +1,24 @@
 To use all cores: how about using distcc?
 
+Clean up:
+```
 killall -9 distccd
 ps -eF | grep distcc # check no distccd processes anymore
-
-
+```
+Start a distccd dameon on X100 cores, and one on A100 cores:
+```
 distccd --daemon -p 3632
 ps -eF | grep distccd $ yes, on X100 cores
 echo $$ >  /proc/set_ai_thread # proceed bash shell on AI core 
 distccd --daemon -p 3633 # yes, on A100 cores
 ps -eF | grep distccd # yes!
-
+```
+ANd use them:
+```
 export DISTCC_HOSTS='localhost:3632 localhost:3633'
 printenv | grep -i distcc # check
 make -j16 CC=distcc
-
+```
 
 ```
 superkoning@spacemit:~/python-source/Python-3.14.2$ ps -eF | grep distccd
