@@ -7,10 +7,10 @@ ps -eF | grep distcc # check no distccd processes anymore
 ```
 Start a distccd dameon on X100 cores, and one on A100 cores:
 ```
-distccd --daemon -p 3632
+distccd --daemon -p 3632 --allow-private
 ps -eF | grep distccd $ yes, on X100 cores
 echo $$ >  /proc/set_ai_thread # proceed bash shell on AI core 
-distccd --daemon -p 3633 # yes, on A100 cores
+distccd --daemon -p 3633 --allow-private # yes, on A100 cores
 ps -eF | grep distccd # yes! Will show a lot of daemons
 ```
 And use them:
