@@ -11,9 +11,9 @@ distccd --daemon -p 3632
 ps -eF | grep distccd $ yes, on X100 cores
 echo $$ >  /proc/set_ai_thread # proceed bash shell on AI core 
 distccd --daemon -p 3633 # yes, on A100 cores
-ps -eF | grep distccd # yes!
+ps -eF | grep distccd # yes! Will show a lot of daemons
 ```
-ANd use them:
+And use them:
 ```
 export DISTCC_HOSTS='localhost:3632 localhost:3633'
 printenv | grep -i distcc # check
@@ -62,3 +62,9 @@ superko+  457817  457800  0  1524   924  13 16:18 ?        00:00:00 /usr/bin/dis
 superko+  457818  457800  0  1524   924   8 16:18 ?        00:00:00 /usr/bin/distccd --daemon -p 3633
 superko+  457826  381613  0  2255  1600  15 16:18 pts/3    00:00:00 grep --color=auto distccd
 ```
+
+
+While `make` is running:
+
+<img width="1055" height="548" alt="image" src="https://github.com/user-attachments/assets/f18c90a9-b97c-41df-a1cf-afe0aeae4847" />
+
