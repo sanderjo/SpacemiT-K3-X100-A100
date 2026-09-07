@@ -34,40 +34,61 @@ A thread only reaches the real A100 unit after routing itself there:
 echo $$ > /proc/set_ai_thread
 ```
 
-This file is world-writable, no root required. `vmadot_a100.c` does
+This file is world-writable, no root required. `vmadot_a100_tricky_A100_assignment.c` does
 this itself at startup (`route_to_a100()`), so it works standalone.
 `BAD_BAD_vmadot_x100.c` is the same kernel with that call removed, to
 show what happens if you forget it.
 
+`vmadot_a100_tricky_A100_assignment.c`'s `route_to_a100()` does the `/proc/set_ai_thread` write
+via `fopen()`/`fprintf()` from inside the very process that then runs
+`vmadot` -- by that point glibc startup, the dynamic linker, and stdio
+have already run on the X100 core (256-bit VLEN), which upstream calls
+out as dangerous in general, since nothing guarantees none of that ever
+touches a vector register. brucehoult's
+[`k3_ai`](https://github.com/brucehoult/k3_ai) launcher (`aix.S`) avoids
+this by being a tiny raw-syscall program with no libc at all: it writes
+its PID to `/proc/set_ai_thread` and then `execve()`s the real target
+program, so the target's own startup code only ever runs after routing.
+`vmadot_a100_better_A100_core_using.c` reproduces that ordering in a
+single self-contained file: it routes itself with bare `syscall()`s (no
+stdio) and then `execve()`s `/proc/self/exe` -- itself -- so the kernel
+only ever runs inside a process image that was loaded after the thread
+was already parked on an A100 core.
+
 The A100 matrix unit also has a constant **-1 accumulator bias**,
-which both `vmadot_a100.c` and `simulate_vmadot.py` correct for by
+which both `vmadot_a100_tricky_A100_assignment.c` and `simulate_vmadot.py` correct for by
 adding 1 back to every output element after the multiply.
 
 ## Files
 
-- `vmadot_a100.c` — the real kernel: routes to an A100 core, runs the
+- `vmadot_a100_tricky_A100_assignment.c` — the real kernel: routes to an A100 core, runs the
   8x16 · 8x16^T int8 matmul via inline `vmadot` asm, corrects the -1
   bias, prints the 8x8 int32 result.
+- `vmadot_a100_better_A100_core_using.c` — same kernel and output, but
+  routes to the A100 core the way `aix.S` does (raw-syscall write to
+  `/proc/set_ai_thread` followed by a self-`execve()`) instead of
+  `vmadot_a100_tricky_A100_assignment.c`'s in-process `fopen()` trick.
 - `BAD_BAD_vmadot_x100.c` — same kernel, but **without** the A100
   routing step, left running on an X100 core. Demonstrates the
   silent-no-op failure mode: no crash, just wrong output.
 - `simulate_vmadot.py` — pure-Python reference model of the same
   computation (raw vs. bias-corrected), used to independently verify
   the C/asm output.
-- `Makefile` — builds both `vmadot_a100` and `BAD_BAD_vmadot_x100`.
+- `Makefile` — builds `vmadot_a100_tricky_A100_assignment`, `vmadot_a100_better_A100_core_using`,
+  and `BAD_BAD_vmadot_x100`.
 
 ## Building and running
 
 ```
 make
-./vmadot_a100
+./vmadot_a100_tricky_A100_assignment
 ```
 
 ## Correct output
 
 `A[8,16]` has row i = `i, i+1, ..., i+15`; `Bt[8,16]` has row j =
 `j, j+1, ..., j+15` (so `B`'s column j is that same sequence). Running
-`./vmadot_a100` on an A100 core prints:
+`./vmadot_a100_tricky_A100_assignment` on an A100 core prints:
 
 ```
 C =

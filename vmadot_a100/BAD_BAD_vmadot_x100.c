@@ -1,9 +1,11 @@
 // BAD_BAD_vmadot_x100.c
-// Same as vmadot_a100.c but WITHOUT route_to_a100(): run from a normal
-// login session, the thread stays on an X100 core, so vmadot silently
-// no-ops and C comes out all zeros instead of the real matmul result.
+// Same as vmadot_a100_tricky_A100_assignment.c but WITHOUT
+// route_to_a100(): run from a normal login session, the thread stays on
+// an X100 core, so vmadot silently no-ops and C comes out all zeros
+// instead of the real matmul result.
 //
-// See compile.md / vmadot_a100.c for the real, correct version.
+// See README.md / vmadot_a100_tricky_A100_assignment.c for the real,
+// correct version.
 
 #include <stdio.h>
 #include <stdint.h>

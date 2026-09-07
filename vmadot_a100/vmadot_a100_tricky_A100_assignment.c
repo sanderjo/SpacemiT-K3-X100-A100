@@ -1,4 +1,4 @@
-// vmadot_a100.c
+// vmadot_a100_tricky_A100_assignment.c
 // Int8 matrix multiply using SpacemiT XSMTVDotII (IME) on the K3's A100 core.
 // Tile shape for the base vmadot path on A100: M=N=8, K=16.
 //   C[8x8] (int32) = A[8x16] (int8) * B^T  (B stored column-major, i.e. Bt[8x16])
