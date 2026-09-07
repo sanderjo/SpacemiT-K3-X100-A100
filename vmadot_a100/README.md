@@ -54,12 +54,12 @@ adding 1 back to every output element after the multiply.
 - `simulate_vmadot.py` — pure-Python reference model of the same
   computation (raw vs. bias-corrected), used to independently verify
   the C/asm output.
-- `compile.md` — build command and the `/proc/set_ai_thread` note.
+- `Makefile` — builds both `vmadot_a100` and `BAD_BAD_vmadot_x100`.
 
 ## Building and running
 
 ```
-gcc -march=rv64gcv_xsmtvdotii -mabi=lp64d -O2 vmadot_a100.c -o vmadot_a100
+make
 ./vmadot_a100
 ```
 
